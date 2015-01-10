@@ -1,3 +1,4 @@
-name: Your New Jekyll Site
+name: BritanniaREO
 markdown: redcarpet
 pygments: true
+exclude: [node_modules, Gruntfile.js, package.json]

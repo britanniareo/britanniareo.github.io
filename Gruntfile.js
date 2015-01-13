@@ -71,11 +71,11 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: ['styles/**/*.scss'],
-        tasks: ['sass', 'shell:jekyllBuild']
+        tasks: ['sass:dev', 'shell:jekyllBuild']
       },
       js: {
         files: ['scripts/*.js'],
-        tasks: ['uglify', 'jshint', 'shell:jekyllBuild']
+        tasks: [ 'jshint', 'uglify', 'shell:jekyllBuild']
       },
       site: {
         files: ['**/*.html', '!_site/**/*.html', '_posts/**/*.md', '_drafts/**/*.md'],

@@ -1,0 +1,9 @@
+{
+  "browser": true,
+  "curly": true,
+  "eqeqeq": true,
+  "latedef": "nofunc",
+  "quotmark": "single",
+  "undef": true,
+  "unused": true
+}

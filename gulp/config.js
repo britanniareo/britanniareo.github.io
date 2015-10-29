@@ -11,6 +11,10 @@ module.exports = {
     },
     open: true
   },
+  images: {
+    src: global.src+'/img/**/*',
+    dist: global.dist+'/img'
+  },
   sass: {
     src: global.src+'/scss/**/*.scss',
     dist: global.dist+'/css',
@@ -18,5 +22,9 @@ module.exports = {
       sourceComments: 'map',
       imagePath: '/dist/img' // Used by the image-url helper
     }
+  },
+  scripts: {
+    dist: global.dist+'/js',
+    src: global.src+'/js'
   }
 };

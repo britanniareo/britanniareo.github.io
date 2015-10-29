@@ -1,0 +1,1 @@
+!function(o,n){o.console.log("Fuck Yeah!!!")}(window);

@@ -1,4 +1,144 @@
+/* Angular Material Styles */
+@import 'https://ajax.googleapis.com/ajax/libs/angular_material/0.10.1/angular-material.min.css';
+
 body {
-  background: url(/dist/img/banner_bg_2x.jpg) no-repeat center bottom fixed;
+  background: url(/dist/img/banner_bg_2x.jpg) no-repeat center top fixed;
   background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.header {
+  color: rgba(0,0,0,0.87);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background: #FFF;
+
+  .container {
+    max-width: 100%;
+  }
+
+  .header-top {
+    padding: 6px 0px;
+  }
+
+  a {
+    color: rgba(0,0,0,0.87);
+
+    &.logo {
+      float: left;
+
+      @media screen and (min-width: 768px) {
+        margin-left: 16px;
+      }
+
+      img {
+        display: block;
+        height: 48px;
+        width: 48px;
+      }
+    }
+  }
+
+  .title {
+    display: inline-block;
+    padding-left: 12px;
+    line-height: 48px;
+    font-size: 21px;
+    font-weight: 300;
+  }
+
+  .menu {
+    width: 100%;
+    float: right;
+    margin-right: 16px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+
+    @media screen and (min-width: 768px) {
+      width: auto;
+      height: auto;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 48px;
+      text-transform: uppercase;
+      display: block;
+      text-align: center;
+      padding: 0 24px;
+
+      @media screen and (min-width: 768px) {
+        display: inline;
+        text-align: right;
+      }
+
+      &:last-child {
+        @media screen and (min-width: 768px) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.menu-toggle { 
+  cursor: pointer;
+  position: fixed;
+  top: 17px;
+  padding: 10px 35px 16px 0;
+  right: 15px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  span,
+  span:before,
+  span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 4px;
+    width: 32px;
+    background: rgba(0,0,0,0.87);
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 0.5s ease;
+  }
+
+  span:before {
+    top: -10px; 
+  }
+
+  span:after {
+    bottom: -10px;
+  }
+
+  .open & span {
+    background-color: transparent !important;
+
+    &:before,
+    &:after {
+      top: 0;
+    }
+
+    &:before {
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
 }

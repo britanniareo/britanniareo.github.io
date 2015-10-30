@@ -1,1 +1,1 @@
-!function(o,n){o.console.log("Fuck Yeah!!!")}(window);
+!function(e,n,t){n.module("Britannia",["ngMaterial"]).controller("NavCtrl",["$scope",function(e){e.menuOpen=!1,e.menuStyle="",e.closeMenu=function(){e.menuOpen=!1,e.menuStyle=""},e.toggleMenu=function(){e.menuOpen=!e.menuOpen,e.menuOpen?e.menuStyle="height:"+document.getElementById("menu-wrapper").offsetHeight+"px;":e.menuStyle=""}}])}(window,window.angular);

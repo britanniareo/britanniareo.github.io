@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="Britannia" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,22 @@
     <link rel="stylesheet" href="/dist/css/britannia.css"/>
   </head>
   <body>
-  	<h1>Hi, We're the Britannia Development Co.</h1>
+    <div id="top" class="header md-whiteframe-z5" ng-class="{open:menuOpen}" ng-controller="NavCtrl">
+      <div class="container">
+        <div class="header-top clearfix">
+          <a href="/" class="logo"><img src="/dist/img/logo_192.png" alt="Britannia Logo"/></a>
+          <a href="/" class="title">Britannia</a>
+          <a href="javascript:void(0)" class="menu-toggle" ng-click="toggleMenu()"><span></span></a>
+          <div class="menu" style="{{ menuStyle }}">
+            <div id="menu-wrapper" class="wrapper">
+              <a href="javascript:void(0)" ng-click="closeMenu()">Nav Link 1</a>
+              <a href="javascript:void(0)" ng-click="closeMenu()">Nav Link 2</a>
+              <a href="javascript:void(0)" ng-click="closeMenu()">Nav Link 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="/dist/js/vendor.js"></script>
   	<script src="/dist/js/britannia.js"></script>
   </body>

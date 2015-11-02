@@ -1,0 +1,58 @@
+application: britannia-reo
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+module: default
+
+handlers:
+
+# Resources
+- url: /css
+  static_dir: static/dist/css
+- url: /img
+  static_dir: static/dist/img
+- url: /js
+  static_dir: static/dist/js
+- url: /html
+  static_dir: static/dist/html
+
+- url: .*
+  script: main.app
+  secure: always
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+
+# The following directories/files will be ignored by GAE when deploying
+skip_files:
+- ^(.*/)?.*/assets/.*$
+- ^(.*/)?.*/build/.*$
+- ^(.*/)?.*/test/.*$
+- ^(.*/)?.*/node_modules/.*$
+- ^(.*/)?.*/src/.*$
+- ^(.*/)?.*/gulp/.*$
+- ^(.*/)?.*/.git/.*$
+- ^(.*/)?.*/docs/.*$
+
+- ^(assets/.*)
+- ^(build/.*)
+- ^(test/.*)
+- ^(node_modules/.*)
+- ^(src/.*)
+- ^(gulp/.*)
+- ^(.git/.*)
+- ^(docs/.*)
+
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/).DS_Store
+- ^(.*/)?.*\.md$
+- ^(.*/).gitignore
+- ^(.*/)gulpfile.js
+- ^(.*/)package.json
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+

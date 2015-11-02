@@ -11,6 +11,10 @@ module.exports = {
     },
     open: true
   },
+  env: {
+    prod: "britannia-reo",
+    dev: "dev-britannia-reo"
+  },
   images: {
     src: global.src+'/img/**/*',
     dist: global.dist+'/img'

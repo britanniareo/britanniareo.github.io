@@ -15,6 +15,13 @@ module.exports = {
     prod: "britannia-reo",
     dev: "dev-britannia-reo"
   },
+  html: {
+    dist: global.dist + '/html',
+    opts: {
+      empty: true
+    },
+    src: global.src + '/html/**/*.html'
+  },
   images: {
     src: global.src+'/img/**/*',
     dist: global.dist+'/img'

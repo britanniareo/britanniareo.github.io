@@ -23,7 +23,8 @@ gulp.task('scripts', function() {
     vendor + '/angular-animate-1.4.7.min.js',
     vendor + '/angular-aria-1.4.7.min.js',
     vendor + '/angular-material-1.0.0-rc1.min.js',
-    vendor + '/angular-ui-router-0.2.15.min.js'
+    vendor + '/angular-ui-router-0.2.15.min.js',
+    vendor + '/analytics.js'
   ])
     .pipe(concat('vendor.js'))
     .pipe(size())

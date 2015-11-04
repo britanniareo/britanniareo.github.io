@@ -60,11 +60,11 @@
 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
 
-        /*if (!$window.ga) {
+        if (!$window.ga || $location.host().indexOf('britanniareo.com') < 0) {
           return;
         }
 
-        $window.ga('send', 'pageview', { page: $location.path() });*/
+        $window.ga('send', 'pageview', { page: $location.path() });
       });
 
       $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {

@@ -1,13 +1,27 @@
 /* Angular Material Styles */
 @import 'https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.css';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: url(/img/banner_bg_2x.jpg) no-repeat center top fixed;
-  background-size: cover;
+    background: #FFF;
+    color: rgba(0,0,0,0.87);
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.4em;
+    margin: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .container {
@@ -25,6 +39,14 @@ a {
   &:after {
     clear: both;
   }
+}
+
+.text-light {
+  color: rgba(0,0,0,.54);
+}
+
+.text-lighter {
+  color: rgba(0,0,0,.38);
 }
 
 .header {
@@ -152,5 +174,38 @@ a {
     &:after {
       transform: rotate(45deg);
     }
+  }
+}
+
+.home--page {
+  background: url(/img/banner_bg_2x.jpg) no-repeat center top fixed;
+  background-size: cover;
+  text-align: center;
+
+  md-card {
+    max-width: 600px;
+  }
+
+  md-card-content {
+    padding: 16px 32px;
+  } 
+
+  img {
+    max-width: 480px;
+    margin: 0 auto;
+  } 
+
+  .md-button {
+    width: 100%;
+    margin: 6px 0;
+
+    @media screen and (min-width: 600px) {
+      width: 240px;
+      margin: 6px 8px;
+    }
+  }
+
+  .fa {
+    margin-right: 8px;
   }
 }

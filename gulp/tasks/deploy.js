@@ -9,3 +9,11 @@ gulp.task('deploy:dev', function(cb){
       cb(err);
     });
 });
+
+gulp.task('deploy:dev', function(cb){
+  exec('appcfg.py --no_cookies -A '+config.prod+' update .', function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      cb(err);
+    });
+});

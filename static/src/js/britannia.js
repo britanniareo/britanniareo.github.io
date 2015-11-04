@@ -36,8 +36,9 @@
         templateUrl: '/html/home.html'
       });
 
-      $stateProvider.state('services', {
+      /*$stateProvider.state('services', {
         url:'/services',
+        controller: 'ServicesCtrl',
         templateUrl: '/html/services.html'
       });
 
@@ -49,7 +50,9 @@
       $stateProvider.state('not-found', {
         url:'*path',
         templateUrl: '/html/not-found.html'
-      });
+      });*/
+
+      $urlRouterProvider.otherwise('/');
 
     }]).run(['$rootScope', '$location', '$window', '$state',  function($rootScope, $location, $window, $state) {
 
@@ -88,6 +91,18 @@
           $scope.menuStyle = '';
         }
       };
+
+    }])
+
+    .controller('ServicesCtrl', ['$scope', '$timeout', function($scope, $timeout) {
+
+      $scope.services = [];
+      $timeout(function() {
+        $scope.services = [
+          'Appliance Install',
+          'Awnings/Patio Covers'
+        ];
+      }, 100);
 
     }]);
 

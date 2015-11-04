@@ -10,7 +10,7 @@ gulp.task('deploy:dev', function(cb){
     });
 });
 
-gulp.task('deploy:dev', function(cb){
+gulp.task('deploy:prod', function(cb){
   exec('appcfg.py --no_cookies -A '+config.prod+' update .', function (err, stdout, stderr) {
       console.log(stdout);
       console.log(stderr);

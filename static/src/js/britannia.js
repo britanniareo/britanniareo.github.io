@@ -121,14 +121,13 @@
         controller: 'aniDistances',
         transclude: true,
         replace: true,
-        template: '<div ng-transclude ng-class="{ showing: show }""></div>',
+        template: '<div ng-transclude ng-class="{ active: inView }"></div>',
         scope: {
-          show: '@',
+          inView: '@'
         },
         link: function(scope, element, attrs) {
-
           angular.element($window).bind('scroll', function() {
-            if (!scope.show) {
+            if (!scope.inView) {
               var position = scope.getPosition(element);
               var offset = scope.getScrollOffsets($window);
               var viewport = scope.getViewPortSize($window);
@@ -137,9 +136,9 @@
                   y: parseInt(viewport.y + offset.y)
               }
               if (coverage.y >= (position.y + element[0].offsetHeight) && coverage.x >= position.x) {
-                  scope.show = true;
+                  scope.inView = true;
               } else {
-                  scope.show = false;
+                  scope.inView = false;
               }
               scope.$apply();
             }

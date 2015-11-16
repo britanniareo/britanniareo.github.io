@@ -64,7 +64,16 @@ img {
   }
 }
 
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
 
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .header {
   color: rgba(0,0,0,0.87);
@@ -229,11 +238,20 @@ img {
     md-card-content {
       padding: 16px 32px;
     }
+
+    h2 {
+      font-weight: 300;
+      font-size: 21px;
+    }
   }
 
   .cta--services {
     padding: 36px 0;
     background: #F5F5F5;
+
+    @media screen and (min-width: 600px) {
+      background: #FFF;
+    }
 
     h2 {
       font-weight: 300;
@@ -260,17 +278,9 @@ img {
 
     .service {
       padding: 15px;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: transform 1s ease-out, opacity 1s ease-out;
 
       @media screen and (min-width: 600px) {
         padding: 30px 15px;
-      }
-
-      &.showing {
-        opacity: 1;
-        transform: translateY(0);
       }
 
       &-info {

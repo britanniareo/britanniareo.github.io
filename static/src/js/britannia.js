@@ -33,10 +33,11 @@
 
       $stateProvider.state('home', {
         url:'/',
+        controller: 'HomeCtrl',
         templateUrl: '/html/home.html'
       });
 
-      /*$stateProvider.state('services', {
+      $stateProvider.state('services', {
         url:'/services',
         controller: 'ServicesCtrl',
         templateUrl: '/html/services.html'
@@ -50,9 +51,7 @@
       $stateProvider.state('not-found', {
         url:'*path',
         templateUrl: '/html/not-found.html'
-      });*/
-
-      $urlRouterProvider.otherwise('/');
+      });
 
     }]).run(['$rootScope', '$location', '$window', '$state',  function($rootScope, $location, $window, $state) {
 
@@ -60,7 +59,7 @@
 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
 
-        if (!$window.ga || $location.host().indexOf('britanniareo.com') < 0) {
+        if (!$window.ga || $location.host().indexOf('www.britanniareo.com') < 0) {
           return;
         }
 
@@ -71,6 +70,82 @@
         event.preventDefault();
         $state.go('error');
       });
+    }])
+
+    .controller('aniDistances', ['$scope', function($scope) {
+      $scope.getScrollOffsets = function(w) {
+
+        // Use the specified window or the current window if no argument 
+        w = w || window;
+
+        // This works for all browsers except IE versions 8 and before
+        if (w.pageXOffset !== null) {
+          return {
+              x: w.pageXOffset,
+              y: w.pageYOffset
+          };
+        }
+
+        // For IE (or any browser) in Standards mode
+        var d = w.document;
+        if (document.compatMode === 'CSS1Compat') {
+          return {
+              x: d.documentElement.scrollLeft,
+              y: d.documentElement.scrollTop
+          };
+        }
+
+        // For browsers in Quirks mode
+        return {
+          x: d.body.scrollLeft,
+          y: d.body.scrollTop
+        };
+      };
+      $scope.getPosition = function(e) {
+        return {
+          x: e[0].offsetLeft,
+          y: e[0].offsetTop
+        };
+      };
+      $scope.getViewPortSize = function(w) {
+        return {
+          x: Math.max(document.documentElement.clientWidth, w.innerWidth || 0),
+          y: Math.max(document.documentElement.clientHeight, w.innerHeight || 0)
+        };
+      };
+    }])
+
+    .directive('aniView', ['$window', function($window) {
+      return {
+        restrict: 'A',
+        controller: 'aniDistances',
+        transclude: true,
+        replace: true,
+        template: '<div ng-transclude ng-class="{ showing: show }""></div>',
+        scope: {
+          show: '@',
+        },
+        link: function(scope, element, attrs) {
+
+          angular.element($window).bind('scroll', function() {
+            if (!scope.show) {
+              var position = scope.getPosition(element);
+              var offset = scope.getScrollOffsets($window);
+              var viewport = scope.getViewPortSize($window);
+              var coverage = {
+                  x: parseInt(viewport.x + offset.x),
+                  y: parseInt(viewport.y + offset.y)
+              }
+              if (coverage.y >= (position.y + element[0].offsetHeight) && coverage.x >= position.x) {
+                  scope.show = true;
+              } else {
+                  scope.show = false;
+              }
+              scope.$apply();
+            }
+          });
+        }
+      };
     }])
 
     .controller('NavCtrl', ['$scope', function($scope) {
@@ -94,8 +169,40 @@
 
     }])
 
-    .controller('ServicesCtrl', ['$scope', '$timeout', function($scope, $timeout) {
+    .controller('HomeCtrl', ['$scope', function($scope) {
 
+      $scope.services = [
+        {
+          name: 'Service',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper consectetur eleifend. Integer quis turpis et ligula aliquet congue. Nullam pharetra lorem sem, vitae mollis odio lobortis et. Nunc lobortis pulvinar lacus et porta. Ut non placerat turpis'
+        },
+        {
+          name: 'Service',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper consectetur eleifend. Integer quis turpis et ligula aliquet congue. Nullam pharetra lorem sem, vitae mollis odio lobortis et. Nunc lobortis pulvinar lacus et porta. Ut non placerat turpis'
+        },
+        {
+          name: 'Service',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper consectetur eleifend. Integer quis turpis et ligula aliquet congue. Nullam pharetra lorem sem, vitae mollis odio lobortis et. Nunc lobortis pulvinar lacus et porta. Ut non placerat turpis'
+        },
+        {
+          name: 'Service',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper consectetur eleifend. Integer quis turpis et ligula aliquet congue. Nullam pharetra lorem sem, vitae mollis odio lobortis et. Nunc lobortis pulvinar lacus et porta. Ut non placerat turpis'
+        },
+        {
+          name: 'Service',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper consectetur eleifend. Integer quis turpis et ligula aliquet congue. Nullam pharetra lorem sem, vitae mollis odio lobortis et. Nunc lobortis pulvinar lacus et porta. Ut non placerat turpis'
+        },
+        {
+          name: 'Service',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper consectetur eleifend. Integer quis turpis et ligula aliquet congue. Nullam pharetra lorem sem, vitae mollis odio lobortis et. Nunc lobortis pulvinar lacus et porta. Ut non placerat turpis'
+        }
+      ];
+
+    }])
+
+    .controller('ServicesCtrl', ['$scope', '$timeout', '$mdMedia', function($scope, $timeout, $mdMedia) {
+
+      $scope.$mdMedia = $mdMedia;
       $scope.services = [];
       $timeout(function() {
         $scope.services = [

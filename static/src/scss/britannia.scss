@@ -27,6 +27,7 @@ img {
 .container {
   max-width: 1200px;
   padding: 0 15px;
+  margin: 0 auto;
 }
 
 .clearfix {
@@ -48,6 +49,22 @@ img {
 .text-lighter {
   color: rgba(0,0,0,.38);
 }
+
+.md-button {
+  width: 100%;
+  margin: 6px 0;
+
+  @media screen and (min-width: 600px) {
+    width: 240px;
+    margin: 6px 8px;
+  }
+
+  .fa {
+    margin-right: 8px;
+  }
+}
+
+
 
 .header {
   color: rgba(0,0,0,0.87);
@@ -71,7 +88,7 @@ img {
     &.logo {
       float: left;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 600px) {
         margin-left: 16px;
       }
 
@@ -99,7 +116,7 @@ img {
     overflow: hidden;
     transition: height 0.5s ease;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 600px) {
       width: auto;
       height: auto;
     }
@@ -112,13 +129,13 @@ img {
       text-align: center;
       padding: 0 24px;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 600px) {
         display: inline;
         text-align: right;
       }
 
       &:last-child {
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 600px) {
           padding-right: 0;
         }
       }
@@ -133,7 +150,7 @@ img {
   padding: 10px 35px 16px 0;
   right: 15px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
     display: none;
   }
 
@@ -177,59 +194,96 @@ img {
   }
 }
 
-.home--page {
+.page--home {
   text-align: center;
-
+  padding: 96px 0 0;
+  
   @media screen and (min-width: 600px) {
-    margin: 0;
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
     background: url(/img/banner_bg.jpg) no-repeat center top fixed;
     background-size: cover;
   }
 
-  @media
-    only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1200px),
-    only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1200px),
-    only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1200px),
-    only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1200px),
-    only screen and (                min-resolution: 192dpi) and (min-width: 1200px),
-    only screen and (                min-resolution: 2dppx)  and (min-width: 1200px) {
-    background: url(/img/banner_bg_2x.jpg) no-repeat center top fixed;
-    background-size: cover;
-  }  
+  .cta--welcome {
+    text-align: center;
+    padding-bottom: 36px;
 
-  md-card {
+    @media screen and (min-width: 600px) {
+      padding: 72px 0 108px;
+    }
+
+    .logo {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    md-card {
     max-width: 600px;
     margin: 0 auto;
     box-shadow: none;
 
-    @media screen and (min-width: 600px) {
-      box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),0 7px 10px 1px rgba(0,0,0,.14),0 2px 16px 1px rgba(0,0,0,.12);
+      @media screen and (min-width: 600px) {
+        box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12);
+      }
+    }
+
+    md-card-content {
+      padding: 16px 32px;
     }
   }
 
-  md-card-content {
-    padding: 16px 32px;
-  } 
+  .cta--services {
+    padding: 36px 0;
+    background: #F5F5F5;
 
-  img {
-    max-width: 480px;
-    margin: 0 auto;
-  } 
-
-  .md-button {
-    width: 100%;
-    margin: 6px 0;
-
-    @media screen and (min-width: 600px) {
-      width: 240px;
-      margin: 6px 8px;
+    h2 {
+      font-weight: 300;
+      font-size: 36px;
+      text-transform: uppercase;
     }
-  }
 
-  .fa {
-    margin-right: 8px;
+    h3 {
+      font-weight: 300;
+      font-size: 24px;
+    }
+
+    md-divider {
+      margin: 0 auto;
+      width: 120px;
+      border-top-color: #005196;
+      border-top-width: 2px;
+    }
+
+    .services {
+      padding-top: 30px;
+      text-align: left;
+    }
+
+    .service {
+      padding: 15px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: transform 1s ease-out, opacity 1s ease-out;
+
+      @media screen and (min-width: 600px) {
+        padding: 30px 15px;
+      }
+
+      &.showing {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &-info {
+        padding: 0 15px 0 30px;
+      }
+
+      h3 {
+        margin-top: 0;
+      }
+
+      .fa {
+        color: #005196;
+      }
+    }
   }
 }

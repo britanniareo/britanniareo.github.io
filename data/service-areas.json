@@ -1,0 +1,403 @@
+[
+  {
+    "county": "Anoka",
+    "state": "MN"
+  },
+  {
+    "county": "Benton",
+    "state": "MN"
+  },
+  {
+    "county": "Blue Earth",
+    "state": "MN"
+  },
+  {
+    "county": "Brown",
+    "state": "MN"
+  },
+  {
+    "county": "Carver",
+    "state": "MN"
+  },
+  {
+    "county": "Chisago",
+    "state": "MN"
+  },
+  {
+    "county": "Crow Wing",
+    "state": "MN"
+  },
+  {
+    "county": "Dakota",
+    "state": "MN"
+  },
+  {
+    "county": "Dodge",
+    "state": "MN"
+  },
+  {
+    "county": "Goodhue",
+    "state": "MN"
+  },
+  {
+    "county": "Hennepin",
+    "state": "MN"
+  },
+  {
+    "county": "Isanti",
+    "state": "MN"
+  }
+  ,
+  {
+    "county": "Kanabec",
+    "state": "MN"
+  },
+  {
+    "county": "Kandiyohi",
+    "state": "MN"
+  },
+  {
+    "county": "Le Sueur",
+    "state": "MN"
+  },
+  {
+    "county": "McLeod",
+    "state": "MN"
+  },
+  {
+    "county": "Meeker",
+    "state": "MN"
+  },
+  {
+    "county": "Mille Lacs",
+    "state": "MN"
+  },
+  {
+    "county": "Morrison",
+    "state": "MN"
+  },
+  {
+    "county": "Nicollet",
+    "state": "MN"
+  },
+  {
+    "county": "Olmsted",
+    "state": "MN"
+  },
+  {
+    "county": "Pine",
+    "state": "MN"
+  },
+  {
+    "county": "Ramsey",
+    "state": "MN"
+  },
+  {
+    "county": "Rice",
+    "state": "MN"
+  },
+  {
+    "county": "Scott",
+    "state": "MN"
+  },
+  {
+    "county": "Sherburne",
+    "state": "MN"
+  },
+  {
+    "county": "Sibley",
+    "state": "MN"
+  },
+  {
+    "county": "Stearns",
+    "state": "MN"
+  },
+  {
+    "county": "Steele",
+    "state": "MN"
+  },
+  {
+    "county": "Waseca",
+    "state": "MN"
+  },
+  {
+    "county": "Washington",
+    "state": "MN"
+  },
+  {
+    "county": "Wright",
+    "state": "MN"
+  },
+  {
+    "county": "Contra Costa",
+    "state": "CA"
+  },
+  {
+    "county": "Imperial",
+    "state": "CA"
+  },
+  {
+    "county": "Los Angeles",
+    "state": "CA"
+  },
+  {
+    "county": "Orange",
+    "state": "CA"
+  },
+  {
+    "county": "Riverside",
+    "state": "CA"
+  },
+  {
+    "county": "San Bernardino",
+    "state": "CA"
+  },
+  {
+    "county": "San Diego",
+    "state": "CA"
+  },
+  {
+    "county": "Adams",
+    "state": "CO"
+  },
+  {
+    "county": "Arapahoe",
+    "state": "CO"
+  },
+  {
+    "county": "Boulder",
+    "state": "CO"
+  },
+  {
+    "county": "Denver",
+    "state": "CO"
+  },
+  {
+    "county": "Douglas",
+    "state": "CO"
+  },
+  {
+    "county": "Jefferson",
+    "state": "CO"
+  },
+  {
+    "county": "Weld",
+    "state": "CO"
+  },
+  {
+    "county": "Charlotte",
+    "state": "FL"
+  },
+  {
+    "county": "Citrus",
+    "state": "FL"
+  },
+  {
+    "county": "Collier",
+    "state": "FL"
+  },
+  {
+    "county": "Hardee",
+    "state": "FL"
+  },
+  {
+    "county": "Hernando",
+    "state": "FL"
+  },
+  {
+    "county": "Hillsborough",
+    "state": "FL"
+  },
+  {
+    "county": "Lee",
+    "state": "FL"
+  },
+  {
+    "county": "Manatee",
+    "state": "FL"
+  },
+  {
+    "county": "Pasco",
+    "state": "FL"
+  },
+  {
+    "county": "Pinellas",
+    "state": "FL"
+  },
+  {
+    "county": "Polk",
+    "state": "FL"
+  },
+  {
+    "county": "Sarasota",
+    "state": "FL"
+  },
+  {
+    "county": "Sumter",
+    "state": "FL"
+  },
+  {
+    "county": "Collier",
+    "state": "FL"
+  },
+  {
+    "county": "Freeborn",
+    "state": "MN"
+  },
+  {
+    "county": "Mesa",
+    "state": "CO"
+  },
+  {
+    "county": "Todd",
+    "state": "MN"
+  },
+  {
+    "county": "Alameda",
+    "state": "CA"
+  },
+  {
+    "county": "Aitkin",
+    "state": "MN"
+  },
+  {
+    "county": "Becker",
+    "state": "MN"
+  },
+  {
+    "county": "Beltrami",
+    "state": "MN"
+  },
+  {
+    "county": "Carlton",
+    "state": "MN"
+  },
+  {
+    "county": "Cass",
+    "state": "MN"
+  },
+  {
+    "county": "Chippewa",
+    "state": "MN"
+  },
+  {
+    "county": "Clearwater",
+    "state": "MN"
+  },
+  {
+    "county": "Douglas",
+    "state": "MN"
+  },
+  {
+    "county": "Hubbard",
+    "state": "MN"
+  },
+  {
+    "county": "Itasca",
+    "state": "MN"
+  },
+  {
+    "county": "Mower",
+    "state": "MN"
+  },
+  {
+    "county": "Otter Tail",
+    "state": "MN"
+  },
+  {
+    "county": "Pope",
+    "state": "MN"
+  },
+  {
+    "county": "Saint Louis",
+    "state": "MN"
+  },
+  {
+    "county": "Swift",
+    "state": "MN"
+  },
+  {
+    "county": "Wabasha",
+    "state": "MN"
+  },
+  {
+    "county": "Wadena",
+    "state": "MN"
+  },
+  {
+    "county": "Winona",
+    "state": "MN"
+  },
+  {
+    "county": "Orange",
+    "state": "FL"
+  },
+  {
+    "county": "Osceola",
+    "state": "FL"
+  },
+  {
+    "county": "Seminole",
+    "state": "FL"
+  },
+  {
+    "county": "Cache",
+    "state": "UT"
+  },
+  {
+    "county": "Weber",
+    "state": "UT"
+  },
+  {
+    "county": "Morgan",
+    "state": "UT"
+  },
+  {
+    "county": "Summit",
+    "state": "UT"
+  },
+  {
+    "county": "Davis",
+    "state": "UT"
+  },
+  {
+    "county": "Tooele",
+    "state": "UT"
+  },
+  {
+    "county": "Salt Lake",
+    "state": "UT"
+  },
+  {
+    "county": "Wasatch",
+    "state": "UT"
+  },
+  {
+    "county": "Utah",
+    "state": "UT"
+  },
+  {
+    "county": "Sacramento",
+    "state": "CA"
+  },
+  {
+    "county": "Clackamas",
+    "state": "OR"
+  },
+  {
+    "county": "Marion",
+    "state": "OR"
+  },
+  {
+    "county": "Multnomah",
+    "state": "OR"
+  },
+  {
+    "county": "Washington",
+    "state": "OR"
+  },
+  {
+    "county": "Yamhill",
+    "state": "MN"
+  }
+]

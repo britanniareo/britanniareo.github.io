@@ -43,6 +43,12 @@
         templateUrl: '/html/services.html'
       });
 
+      $stateProvider.state('service-areas', {
+        url:'/service-areas',
+        controller: 'ServiceAreasCtrl',
+        templateUrl: '/html/service-areas.html'
+      });
+
       $stateProvider.state('error', {
         url:'/error',
         templateUrl: '/html/not-found.html'
@@ -157,6 +163,16 @@
       return servicesService;
     }])
 
+    .factory('ServiceAreasService', ['$http', function($http) {
+      var areasService = {};
+
+      areasService.getAllAreas = function() {
+        return $http({ url: '/api/service-areas/v1' });
+      };
+
+      return areasService;
+    }])
+
     .controller('NavCtrl', ['$scope', function($scope) {
 
       $scope.menuOpen = false;
@@ -214,6 +230,16 @@
       $scope.services = [];
       ServicesService.getAllServices().then(function(response) {
         $scope.services = response.data;
+      });
+
+    }])
+
+    .controller('ServiceAreasCtrl', ['$scope', 'ServiceAreasService', function($scope, ServiceAreasService) {
+
+      $scope.areas = [];
+      ServiceAreasService.getAllAreas().then(function(response) {
+        console.log(response.data);
+        $scope.areas = response.data;
       });
 
     }]);

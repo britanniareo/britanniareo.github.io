@@ -36,9 +36,16 @@ class ServicesHandler(webapp2.RequestHandler):
 		self.response.headers['Content-Type'] = 'application/json'
 		self.response.write(services)
 
+class ServiceAreasHandler(webapp2.RequestHandler):
+	def get(self):
+		service_areas = open('data/service-areas.json').read()
+		self.response.headers['Content-Type'] = 'application/json'
+		self.response.write(service_areas)
+
 routes = [
 	(r'/', MainHandler),
-	(r'/api/services/v1', ServicesHandler)
+	(r'/api/services/v1', ServicesHandler),
+	(r'/api/service-areas/v1', ServiceAreasHandler)
 ]
 
 app = webapp2.WSGIApplication(routes, debug=True)

@@ -271,15 +271,12 @@ img {
     h2 {
       font-weight: 300;
       font-size: 21px;
+      text-transform: none;
     }
   }
 
   .cta--services {
-    background: #F5F5F5;
-
-    @media screen and (min-width: 600px) {
-      background: #FFF;
-    }
+    background: #FAFAFA;
 
     .services {
       padding-top: 30px;
@@ -308,7 +305,28 @@ img {
   }
 
   .cta--service-areas {
-    background: #303030;
-    color: #FFF;
+    background: #FFF;
+
+    .container {
+      max-width: 768px;
+    }
+
+    .service-areas-map {
+      background: url(/img/map_us_blank.png) no-repeat center top;
+      background-size: cover;
+
+      img {
+        opacity: 0;
+        transition: opacity 1s ease-out;
+      }
+
+      &.active img {
+        opacity: 1;
+      }
+
+      a {
+        display: block;
+      }
+    }
   }
 }

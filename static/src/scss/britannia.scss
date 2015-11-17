@@ -1,6 +1,10 @@
 /* Angular Material Styles */
 @import 'https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.css';
 
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -42,12 +46,12 @@ img {
   }
 }
 
-.text-light {
+.text-dark-secondary {
   color: rgba(0,0,0,.54);
 }
 
-.text-lighter {
-  color: rgba(0,0,0,.38);
+.text-light-secondary {
+  color: rgba(255,255,255,.7);
 }
 
 .md-button {
@@ -203,18 +207,43 @@ img {
   }
 }
 
+.page {
+  padding-top: 96px;
+}
+
 .page--home {
   text-align: center;
-  padding: 96px 0 0;
   
   @media screen and (min-width: 600px) {
     background: url(/img/banner_bg.jpg) no-repeat center top fixed;
     background-size: cover;
   }
 
+  .cta {
+    padding: 36px 0;
+
+    h2 {
+      font-weight: 300;
+      font-size: 36px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 1.2em;
+    }
+
+    md-divider {
+      margin: 0 auto;
+      width: 120px;
+      border-top-color: #005196;
+      border-top-width: 2px;
+    }
+  }
+
   .cta--welcome {
-    text-align: center;
-    padding-bottom: 36px;
+    padding-top: 0;
 
     @media screen and (min-width: 600px) {
       padding: 72px 0 108px;
@@ -246,29 +275,10 @@ img {
   }
 
   .cta--services {
-    padding: 36px 0;
     background: #F5F5F5;
 
     @media screen and (min-width: 600px) {
       background: #FFF;
-    }
-
-    h2 {
-      font-weight: 300;
-      font-size: 36px;
-      text-transform: uppercase;
-    }
-
-    h3 {
-      font-weight: 300;
-      font-size: 24px;
-    }
-
-    md-divider {
-      margin: 0 auto;
-      width: 120px;
-      border-top-color: #005196;
-      border-top-width: 2px;
     }
 
     .services {
@@ -295,5 +305,10 @@ img {
         color: #005196;
       }
     }
+  }
+
+  .cta--service-areas {
+    background: #303030;
+    color: #FFF;
   }
 }

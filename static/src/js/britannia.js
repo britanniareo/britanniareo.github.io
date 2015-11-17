@@ -147,6 +147,16 @@
       };
     }])
 
+    .factory('ServicesService', ['$http', function($http) {
+      var servicesService = {};
+
+      servicesService.getAllServices = function() {
+        return $http({ url: '/api/services/v1' });
+      };
+
+      return servicesService;
+    }])
+
     .controller('NavCtrl', ['$scope', function($scope) {
 
       $scope.menuOpen = false;
@@ -199,16 +209,12 @@
 
     }])
 
-    .controller('ServicesCtrl', ['$scope', '$timeout', '$mdMedia', function($scope, $timeout, $mdMedia) {
+    .controller('ServicesCtrl', ['$scope', 'ServicesService', function($scope, ServicesService) {
 
-      $scope.$mdMedia = $mdMedia;
       $scope.services = [];
-      $timeout(function() {
-        $scope.services = [
-          'Appliance Install',
-          'Awnings/Patio Covers'
-        ];
-      }, 100);
+      ServicesService.getAllServices().then(function(response) {
+        $scope.services = response.data;
+      });
 
     }]);
 

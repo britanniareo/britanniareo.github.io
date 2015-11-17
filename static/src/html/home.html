@@ -1,4 +1,4 @@
-<article class="page page--home">
+<main class="page page--home">
   <section class="cta cta--welcome">
     <div class="container">
       <md-card>
@@ -15,7 +15,7 @@
   <section class="cta cta--services">
     <div class="container">
       <h2>Services</h2>
-      <h3 class="text-light">Some one-liner about our services</h3>
+      <h3 class="text-dark-secondary">Some one-liner about our services</h3>
       <md-divider></md-divider>
       <div class="services" layout="row" layout-wrap>
         <div class="service fade-in-up" flex="100" flex-gt-sm="50" ng-repeat="service in services" layout="row" ani-view>
@@ -30,5 +30,12 @@
         <md-button ui-sref="services" class="md-raised md-primary">View All Services</md-button>
       </div>
     </div>
-  </section> 
-</article>
+  </section>
+  <section class="cta cta--service-areas">
+    <div class="container">
+      <h2>Service Areas</h2>
+      <h3 class="text-light-secondary">We serve over N counties in M States</h3>
+      <md-divider></md-divider>
+    </div>
+  </section>
+</main>

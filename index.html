@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/britannia.css"/>
   </head>
   <body>
-    <header id="top" class="header md-whiteframe-13dp" ng-class="{open:menuOpen}" ng-controller="NavCtrl">
+    <header id="top" class="header md-whiteframe-13dp" ng-class="{open:menuOpen}" ng-controller="NavCtrl" ng-cloak>
       <div class="container">
         <div class="header-top clearfix">
           <a ui-sref="home" class="logo" ng-click="closeMenu()"><img src="img/logo.png" alt="Britannia Logo"/></a>
@@ -26,7 +26,7 @@
         </div>
       </div>
     </header>
-    <ui-view></ui-view>
+    <ui-view ng-cloak></ui-view>
     <script src="js/vendor.js"></script>
   	<script src="js/britannia.js"></script>
   </body>

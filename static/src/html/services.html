@@ -1,4 +1,6 @@
-<div style="padding-top:96px">
-  <h1>Services</h1>
-  <p ng-repeat="service in services">{{ service }}</p>
-</div>
+<main class="page page--services">
+  <section class="container">
+    <h1>Services</h1>
+    <p ng-repeat=" service in services | orderBy:'name' ">{{ service.name }}</p>
+  </section>
+</main>

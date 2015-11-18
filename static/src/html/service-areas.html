@@ -1,6 +1,17 @@
 <main class="page page--service-areas">
   <section class="container">
     <h1>Service Areas</h1>
-    <p ng-repeat="area in areas | orderBy:['state','county']">{{ area.state }} - {{ area.county }}</p>
+    <md-card>
+      <md-card-content>
+        <md-tabs md-dynamic-height md-border-bottom md-swipe-content md-selected="3">
+          <md-tab ng-repeat="state in states | orderBy:'name'" label="{{ state.name }}">
+            <md-content class="md-padding">
+              <h2>{{ state.name }}</h2>
+              <p ng-repeat="county in counties | filter:{ state: state.abbr } | orderBy:'county'">{{ county.name }}</p>
+            </md-content>
+          </md-tab>
+        </md-tabs>
+      </md-card-content>
+    </md-card>
   </section>
 </main>

@@ -1,6 +1,17 @@
 /* Angular Material Styles */
 @import 'https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.css';
 
+@font-face {
+     font-family: 'StateFaceRegular';
+     src: url('/font/stateface-regular-webfont.eot');
+     src: url('/font/stateface-regular-webfont.eot?#iefix') format('embedded-opentype'),
+          url('/font/stateface-regular-webfont.woff') format('woff'),
+          url('/font/stateface-regular-webfont.ttf') format('truetype'),
+          url('/font/stateface-regular-webfont.svg#StateFaceRegular') format('svg');
+     font-weight: normal;
+     font-style: normal;
+ }
+
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }
@@ -44,6 +55,25 @@ img {
   &:after {
     clear: both;
   }
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 48px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 36px;}
+
+h3 {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.2em;
+}
+
+.stateface {
+  font-family: 'StateFaceRegular';
 }
 
 .text-dark-secondary {
@@ -209,6 +239,9 @@ img {
 
 .page {
   padding-top: 96px;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
 }
 
 .page--home {
@@ -223,15 +256,7 @@ img {
     padding: 36px 0;
 
     h2 {
-      font-weight: 300;
-      font-size: 36px;
       text-transform: uppercase;
-    }
-
-    h3 {
-      font-weight: 300;
-      font-size: 24px;
-      line-height: 1.2em;
     }
 
     md-divider {
@@ -314,6 +339,7 @@ img {
     .service-areas-map {
       background: url(/img/map_us_blank.png) no-repeat center top;
       background-size: cover;
+      margin: 30px 0;
 
       img {
         opacity: 0;
@@ -328,5 +354,13 @@ img {
         display: block;
       }
     }
+  }
+}
+
+.page--service-areas {
+  background: #FAFAFA;
+
+  md-card-content {
+    padding: 0;
   }
 }

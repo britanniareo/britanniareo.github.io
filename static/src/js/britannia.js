@@ -24,7 +24,8 @@
          '200', 'A100', 'A200']
       });
       $mdThemingProvider.theme('default')
-        .primaryPalette('britannia-blue');
+        .primaryPalette('britannia-blue')
+        .accentPalette('red');
     }])
 
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
@@ -46,7 +47,12 @@
       $stateProvider.state('service-areas', {
         url:'/service-areas',
         controller: 'ServiceAreasCtrl',
-        templateUrl: '/html/service-areas.html'
+        templateUrl: '/html/service-areas.html',
+        resolve: {
+          areas: ['ServiceAreasService', function(ServiceAreasService) {
+              return ServiceAreasService.getAllAreas();
+          }]
+        }
       });
 
       $stateProvider.state('error', {
@@ -167,7 +173,9 @@
       var areasService = {};
 
       areasService.getAllAreas = function() {
-        return $http({ url: '/api/service-areas/v1' });
+        return $http.get('/api/service-areas/v1').then(function(response) {
+            return response.data;
+        });
       };
 
       return areasService;
@@ -234,13 +242,10 @@
 
     }])
 
-    .controller('ServiceAreasCtrl', ['$scope', 'ServiceAreasService', function($scope, ServiceAreasService) {
+    .controller('ServiceAreasCtrl', ['$scope', 'ServiceAreasService', 'areas', function($scope, ServiceAreasService, areas) {
 
-      $scope.areas = [];
-      ServiceAreasService.getAllAreas().then(function(response) {
-        console.log(response.data);
-        $scope.areas = response.data;
-      });
+      $scope.counties = areas.counties;
+      $scope.states = areas.states;
 
     }]);
 

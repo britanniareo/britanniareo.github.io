@@ -340,6 +340,52 @@ footer {
       font-size: 21px;
       text-transform: none;
     }
+
+    .social-links {
+      border-top: 1px solid #E0E0E0;
+      
+      .md-button {
+        color: rgba(0,0,0,0.54);
+        background: #FFF;
+        margin: 0;
+        padding: 0;
+        height: 48px;
+        width: 48px;
+        border-radius: 0;
+        transition: all 0.2s ease;
+
+        &:hover,
+        &:active {
+          color: #FFF;
+        }
+
+        &.facebook:hover,
+        &.facebook:active {
+          background: #3B5998 !important;
+        }
+
+        &.twitter:hover,
+        &.twitter:active {
+          background: #00ACED !important;
+        }
+
+        &.linkedin:hover,
+        &.linkedin:active {
+          background: #007BB5 !important;
+        }
+
+        &.google-plus:hover,
+        &.google-plus:active {
+          background: #DD4B39 !important;
+        }
+
+        .fa {
+          line-height: 48px;
+          font-size: 24px;
+          margin: 0;
+        }
+      }
+    }
   }
 
   .cta--services {

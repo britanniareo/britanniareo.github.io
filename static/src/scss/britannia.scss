@@ -21,12 +21,12 @@
 }
 
 body {
-    background: #FFF;
-    color: rgba(0,0,0,0.87);
-    font-size: 12px;
-    font-weight: normal;
-    line-height: 1.4em;
-    margin: 0;
+  background: #FAFAFA;
+  color: rgba(0,0,0,0.87);
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.4em;
+  margin: 0;
 }
 
 a {
@@ -84,7 +84,11 @@ h3 {
   color: rgba(255,255,255,.7);
 }
 
-.md-button {
+.nowrap {
+  white-space: nowrap;
+}
+
+.md-button:not(.md-fab) {
   width: 100%;
   margin: 6px 0;
 
@@ -109,7 +113,7 @@ h3 {
   }
 }
 
-.header {
+header {
   color: rgba(0,0,0,0.87);
   position: fixed;
   width: 100%;
@@ -237,15 +241,52 @@ h3 {
   }
 }
 
+footer {
+  background: #FAFAFA;
+  padding: 30px 0;
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    line-height: 1.5em;
+  }
+
+  .social-links {
+    
+    .md-button {
+
+      &.facebook {
+        background: #3B5998 !important;
+      }
+
+      &.twitter {
+        background: #00ACED !important;
+      }
+
+      &.linkedin {
+        background: #007BB5 !important;
+      }
+
+      &.google-plus {
+        background: #DD4B39 !important;
+      }
+
+      .fa {
+        line-height: 56px;
+        font-size: 28px;
+      }
+    }
+  }
+}
+
 .page {
-  padding-top: 96px;
-  margin: 0;
-  width: 100%;
-  min-height: 100%;
+  background: #FAFAFA;
+  padding: 96px 0 30px;
 }
 
 .page--home {
   text-align: center;
+  padding-bottom: 0;
   
   @media screen and (min-width: 600px) {
     background: url(/img/banner_bg.jpg) no-repeat center top fixed;
@@ -358,7 +399,6 @@ h3 {
 }
 
 .page--service-areas {
-  background: #FAFAFA;
 
   md-card-content {
     padding: 0;

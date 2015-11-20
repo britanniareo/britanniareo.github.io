@@ -2,27 +2,33 @@
   "states": [
     {
       "name": "California",
-      "abbr": "CA"
+      "abbr": "CA",
+      "icon": "E"
     },
     {
       "name": "Colorado",
-      "abbr": "CO"
+      "abbr": "CO",
+      "icon": "F"
     },
     {
       "name": "Florida",
-      "abbr": "FL"
+      "abbr": "FL",
+      "icon": "I"
     },
     {
       "name": "Minnesota",
-      "abbr": "MN"
+      "abbr": "MN",
+      "icon": "W"
     },
     {
       "name": "Oregon",
-      "abbr": "OR"
+      "abbr": "OR",
+      "icon": "k"
     },
     {
       "name": "Utah",
-      "abbr": "UT"
+      "abbr": "UT",
+      "icon": "r"
     }
   ],
   "counties": [

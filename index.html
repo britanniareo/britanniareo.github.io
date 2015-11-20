@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/britannia.css"/>
   </head>
-  <body>
+  <body ng-cloak>
     <header id="top" class="header md-whiteframe-13dp" ng-class="{open:menuOpen}" ng-controller="NavCtrl" ng-cloak>
       <div class="container">
         <div class="header-top clearfix">
@@ -27,6 +27,16 @@
       </div>
     </header>
     <ui-view ng-cloak></ui-view>
+    <footer>
+      <h2>Connect with us</h2>
+      <div class="social-links" layout="row" layout-align="center center" layout-wrap>
+        <md-button href="https://www.facebook.com/britdevelopment/" class="md-fab facebook" aria-label="Like us on facebook"><i class="fa fa-facebook"></i></md-button>
+        <md-button href="https://twitter.com/BritanniaDev" class="md-fab twitter" aria-label="Follow us on twitter"><i class="fa fa-twitter"></i></md-button>
+        <md-button href="https://www.linkedin.com/in/britanniadevelopmentcompany" class="md-fab linkedin" aria-label="connect with us on linkedin"><i class="fa fa-linkedin"></i></md-button>
+        <md-button href="https://plus.google.com/+BritanniaDevelopmentCompanyIncMinneapolis/posts" class="md-fab google-plus" aria-label="Add us on google+"><i class="fa fa-google-plus"></i></md-button>
+      </div>
+      <p class="text-dark-secondary">Britannia Development Company &copy; 2015. <span class="inline-block">All rights reserved.</span></p>
+    </footer>
     <script src="js/vendor.js"></script>
   	<script src="js/britannia.js"></script>
   </body>

@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Britannia Development Co</title>
+    <title>Britannia Development Company</title>
     <meta name="description" content="We are a nationwide real estate development company with over 20 years of REO property repair and general construction experience.">
     <link rel="icon" href="/img/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/britannia.css"/>
   </head>
-  <body ng-cloak>
+  <body>
     <header id="top" class="header md-whiteframe-13dp" ng-class="{open:menuOpen}" ng-controller="NavCtrl" ng-cloak>
       <div class="container">
         <div class="header-top clearfix">
@@ -19,9 +19,9 @@
           <a href="javascript:void(0)" class="menu-toggle" ng-click="toggleMenu()"><span></span></a>
           <div class="menu" style="{{ menuStyle }}">
             <div id="menu-wrapper" class="wrapper">
+              <a ui-sref="home" ng-click="closeMenu()">Home</a>
               <a ui-sref="services" ng-click="closeMenu()">Services</a>
               <a ui-sref="service-areas" ng-click="closeMenu()">Service Areas</a>
-              <a href="javascript:void(0)" ng-click="closeMenu()">Nav Link 3</a>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
         <md-button href="https://www.linkedin.com/in/britanniadevelopmentcompany" class="md-fab linkedin" aria-label="connect with us on linkedin"><i class="fa fa-linkedin"></i></md-button>
         <md-button href="https://plus.google.com/+BritanniaDevelopmentCompanyIncMinneapolis/posts" class="md-fab google-plus" aria-label="Add us on google+"><i class="fa fa-google-plus"></i></md-button>
       </div>
-      <p class="text-dark-secondary">Britannia Development Company &copy; 2015. <span class="inline-block">All rights reserved.</span></p>
+      <p class="text-dark-secondary">Britannia Development Company &copy; 2016. <span class="inline-block">All rights reserved.</span></p>
     </footer>
     <script src="js/vendor.js"></script>
   	<script src="js/britannia.js"></script>

@@ -244,8 +244,49 @@
 
     .controller('ServiceAreasCtrl', ['$scope', 'ServiceAreasService', 'areas', function($scope, ServiceAreasService, areas) {
 
-      $scope.counties = areas.counties;
+      var _showCounty = function(county) {
+        var filter = $scope.countyFilter.toLowerCase();
+        if (!filter || filter === "" || county.name.toLowerCase().indexOf(filter) >= 0) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+
+      $scope.countyFilter = "";
+      $scope.stateFilter = "";
       $scope.states = areas.states;
+
+      $scope.clearFilters = function() {
+        $scope.countyFilter = "";
+        $scope.stateFilter = "";
+      }
+
+      $scope.showCounty = function(county) {
+        return _showCounty(county);
+      };
+
+      $scope.showState = function(state) {
+        var show = true;
+        
+        if ($scope.stateFilter!=='' && state.abbr!==$scope.stateFilter) {
+          show = false
+        }
+
+        var filteredCounties = state.counties.filter(_showCounty);
+        if (filteredCounties.length === 0) {
+          show = false;
+        }
+
+        state.showing = show;
+        return show;
+      };
+
+      $scope.statesShowing = function () {
+        return $scope.states.filter(function(state) {
+          return state.showing;
+        }).length;
+      }
 
     }]);
 

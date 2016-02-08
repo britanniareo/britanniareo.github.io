@@ -1,5 +1,5 @@
 /* Angular Material Styles */
-@import 'https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.css';
+@import 'https://ajax.googleapis.com/ajax/libs/angular_material/1.0.4/angular-material.min.css';
 
 @font-face {
      font-family: 'StateFaceRegular';
@@ -25,11 +25,12 @@ body {
   color: rgba(0,0,0,0.87);
   font-size: 12px;
   font-weight: normal;
-  line-height: 1.4em;
+  line-height: 1.4;
   margin: 0;
 }
 
 a {
+  color: #005196;
   text-decoration: none;
 }
 
@@ -447,7 +448,75 @@ footer {
 
 .page--service-areas {
 
-  md-card-content {
-    padding: 0;
+  md-input-container {
+    margin-bottom: 0;
+  }
+
+  .fa {
+    color: #005196;
+    margin: 27px 12px 0 0;
+  }
+
+  .state {
+    margin: 24px 8px;
+    padding: 12px 0 0;
+
+    &--CA {
+      background: url(/img/bkg_ca.jpg) no-repeat right top;
+      background-size: cover;
+    }
+
+    &--CO {
+      background: url(/img/bkg_co.jpg) no-repeat center top;
+      background-size: cover;
+    }
+
+    &--FL {
+      background: url(/img/bkg_fl.jpg) no-repeat center top;
+      background-size: cover;
+    }
+
+    &--MN {
+      background: url(/img/bkg_mn.jpg) no-repeat right top;
+      background-size: cover;
+    }
+
+    &--OR {
+      background: url(/img/bkg_or.jpg) no-repeat right top;
+      background-size: cover;
+    }
+
+    &--UT {
+      background: url(/img/bkg_ut.jpg) no-repeat right top;
+      background-size: cover;
+    }
+
+    h2 {
+      font-size: 48px;
+      margin: 3em 0 0;
+      color: rgba(255,255,255,0.9);
+      padding: 0 12px;
+    }
+
+    .counties {
+      background: rgba(255,255,255,0.9);
+      padding: 12px 24px;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 4px 0;
+    }
+  }
+
+  .stateface {
+    font-size: 1.4em;
+    margin-right: 12px;
+  }
+
+  .no-results {
+    margin: 36px 0;
+    font-size: 18px;
+    text-align: center;
   }
 }

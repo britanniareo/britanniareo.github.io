@@ -3,435 +3,444 @@
     {
       "name": "California",
       "abbr": "CA",
-      "icon": "E"
+      "icon": "E",
+      "counties": [
+        {
+          "name": "Contra Costa",
+          "state": "CA"
+        },
+        {
+          "name": "Imperial",
+          "state": "CA"
+        },
+        {
+          "name": "Los Angeles",
+          "state": "CA"
+        },
+        {
+          "name": "Orange",
+          "state": "CA"
+        },
+        {
+          "name": "Riverside",
+          "state": "CA"
+        },
+        {
+          "name": "San Bernardino",
+          "state": "CA"
+        },
+        {
+          "name": "San Diego",
+          "state": "CA"
+        },
+        {
+          "name": "Sacramento",
+          "state": "CA"
+        }
+      ]
     },
     {
       "name": "Colorado",
       "abbr": "CO",
-      "icon": "F"
+      "icon": "F",
+      "counties": [
+        {
+          "name": "Adams",
+          "state": "CO"
+        },
+        {
+          "name": "Arapahoe",
+          "state": "CO"
+        },
+        {
+          "name": "Boulder",
+          "state": "CO"
+        },
+        {
+          "name": "Denver",
+          "state": "CO"
+        },
+        {
+          "name": "Douglas",
+          "state": "CO"
+        },
+        {
+          "name": "Jefferson",
+          "state": "CO"
+        },
+        {
+          "name": "Weld",
+          "state": "CO"
+        }
+      ]
     },
     {
       "name": "Florida",
       "abbr": "FL",
-      "icon": "I"
+      "icon": "I",
+      "counties": [
+        {
+          "name": "Charlotte",
+          "state": "FL"
+        },
+        {
+          "name": "Citrus",
+          "state": "FL"
+        },
+        {
+          "name": "Collier",
+          "state": "FL"
+        },
+        {
+          "name": "Hardee",
+          "state": "FL"
+        },
+        {
+          "name": "Hernando",
+          "state": "FL"
+        },
+        {
+          "name": "Hillsborough",
+          "state": "FL"
+        },
+        {
+          "name": "Lee",
+          "state": "FL"
+        },
+        {
+          "name": "Manatee",
+          "state": "FL"
+        },
+        {
+          "name": "Pasco",
+          "state": "FL"
+        },
+        {
+          "name": "Pinellas",
+          "state": "FL"
+        },
+        {
+          "name": "Polk",
+          "state": "FL"
+        },
+        {
+          "name": "Sarasota",
+          "state": "FL"
+        },
+        {
+          "name": "Sumter",
+          "state": "FL"
+        },
+        {
+          "name": "Collier",
+          "state": "FL"
+        },
+        {
+          "name": "Orange",
+          "state": "FL"
+        },
+        {
+          "name": "Osceola",
+          "state": "FL"
+        },
+        {
+          "name": "Seminole",
+          "state": "FL"
+        }
+      ]
     },
     {
       "name": "Minnesota",
       "abbr": "MN",
-      "icon": "W"
+      "icon": "W",
+      "counties": [
+        {
+          "name": "Anoka",
+          "state": "MN"
+        },
+        {
+          "name": "Benton",
+          "state": "MN"
+        },
+        {
+          "name": "Blue Earth",
+          "state": "MN"
+        },
+        {
+          "name": "Brown",
+          "state": "MN"
+        },
+        {
+          "name": "Carver",
+          "state": "MN"
+        },
+        {
+          "name": "Chisago",
+          "state": "MN"
+        },
+        {
+          "name": "Crow Wing",
+          "state": "MN"
+        },
+        {
+          "name": "Dakota",
+          "state": "MN"
+        },
+        {
+          "name": "Dodge",
+          "state": "MN"
+        },
+        {
+          "name": "Goodhue",
+          "state": "MN"
+        },
+        {
+          "name": "Hennepin",
+          "state": "MN"
+        },
+        {
+          "name": "Isanti",
+          "state": "MN"
+        },
+        {
+          "name": "Kanabec",
+          "state": "MN"
+        },
+        {
+          "name": "Kandiyohi",
+          "state": "MN"
+        },
+        {
+          "name": "Le Sueur",
+          "state": "MN"
+        },
+        {
+          "name": "McLeod",
+          "state": "MN"
+        },
+        {
+          "name": "Meeker",
+          "state": "MN"
+        },
+        {
+          "name": "Mille Lacs",
+          "state": "MN"
+        },
+        {
+          "name": "Morrison",
+          "state": "MN"
+        },
+        {
+          "name": "Nicollet",
+          "state": "MN"
+        },
+        {
+          "name": "Olmsted",
+          "state": "MN"
+        },
+        {
+          "name": "Pine",
+          "state": "MN"
+        },
+        {
+          "name": "Ramsey",
+          "state": "MN"
+        },
+        {
+          "name": "Rice",
+          "state": "MN"
+        },
+        {
+          "name": "Scott",
+          "state": "MN"
+        },
+        {
+          "name": "Sherburne",
+          "state": "MN"
+        },
+        {
+          "name": "Sibley",
+          "state": "MN"
+        },
+        {
+          "name": "Stearns",
+          "state": "MN"
+        },
+        {
+          "name": "Steele",
+          "state": "MN"
+        },
+        {
+          "name": "Waseca",
+          "state": "MN"
+        },
+        {
+          "name": "Washington",
+          "state": "MN"
+        },
+        {
+          "name": "Wright",
+          "state": "MN"
+        },
+        {
+          "name": "Freeborn",
+          "state": "MN"
+        },
+        {
+          "name": "Mesa",
+          "state": "CO"
+        },
+        {
+          "name": "Todd",
+          "state": "MN"
+        },
+        {
+          "name": "Alameda",
+          "state": "CA"
+        },
+        {
+          "name": "Aitkin",
+          "state": "MN"
+        },
+        {
+          "name": "Becker",
+          "state": "MN"
+        },
+        {
+          "name": "Beltrami",
+          "state": "MN"
+        },
+        {
+          "name": "Carlton",
+          "state": "MN"
+        },
+        {
+          "name": "Cass",
+          "state": "MN"
+        },
+        {
+          "name": "Chippewa",
+          "state": "MN"
+        },
+        {
+          "name": "Clearwater",
+          "state": "MN"
+        },
+        {
+          "name": "Douglas",
+          "state": "MN"
+        },
+        {
+          "name": "Hubbard",
+          "state": "MN"
+        },
+        {
+          "name": "Itasca",
+          "state": "MN"
+        },
+        {
+          "name": "Mower",
+          "state": "MN"
+        },
+        {
+          "name": "Otter Tail",
+          "state": "MN"
+        },
+        {
+          "name": "Pope",
+          "state": "MN"
+        },
+        {
+          "name": "Saint Louis",
+          "state": "MN"
+        },
+        {
+          "name": "Swift",
+          "state": "MN"
+        },
+        {
+          "name": "Wabasha",
+          "state": "MN"
+        },
+        {
+          "name": "Wadena",
+          "state": "MN"
+        },
+        {
+          "name": "Winona",
+          "state": "MN"
+        },
+        {
+          "name": "Yamhill",
+          "state": "MN"
+        }
+      ]
     },
     {
       "name": "Oregon",
       "abbr": "OR",
-      "icon": "k"
+      "icon": "k",
+      "counties": [
+        {
+          "name": "Clackamas",
+          "state": "OR"
+        },
+        {
+          "name": "Marion",
+          "state": "OR"
+        },
+        {
+          "name": "Multnomah",
+          "state": "OR"
+        },
+        {
+          "name": "Washington",
+          "state": "OR"
+        }
+      ]
     },
     {
       "name": "Utah",
       "abbr": "UT",
-      "icon": "r"
-    }
-  ],
-  "counties": [
-    {
-      "name": "Anoka",
-      "state": "MN"
-    },
-    {
-      "name": "Benton",
-      "state": "MN"
-    },
-    {
-      "name": "Blue Earth",
-      "state": "MN"
-    },
-    {
-      "name": "Brown",
-      "state": "MN"
-    },
-    {
-      "name": "Carver",
-      "state": "MN"
-    },
-    {
-      "name": "Chisago",
-      "state": "MN"
-    },
-    {
-      "name": "Crow Wing",
-      "state": "MN"
-    },
-    {
-      "name": "Dakota",
-      "state": "MN"
-    },
-    {
-      "name": "Dodge",
-      "state": "MN"
-    },
-    {
-      "name": "Goodhue",
-      "state": "MN"
-    },
-    {
-      "name": "Hennepin",
-      "state": "MN"
-    },
-    {
-      "name": "Isanti",
-      "state": "MN"
-    }
-    ,
-    {
-      "name": "Kanabec",
-      "state": "MN"
-    },
-    {
-      "name": "Kandiyohi",
-      "state": "MN"
-    },
-    {
-      "name": "Le Sueur",
-      "state": "MN"
-    },
-    {
-      "name": "McLeod",
-      "state": "MN"
-    },
-    {
-      "name": "Meeker",
-      "state": "MN"
-    },
-    {
-      "name": "Mille Lacs",
-      "state": "MN"
-    },
-    {
-      "name": "Morrison",
-      "state": "MN"
-    },
-    {
-      "name": "Nicollet",
-      "state": "MN"
-    },
-    {
-      "name": "Olmsted",
-      "state": "MN"
-    },
-    {
-      "name": "Pine",
-      "state": "MN"
-    },
-    {
-      "name": "Ramsey",
-      "state": "MN"
-    },
-    {
-      "name": "Rice",
-      "state": "MN"
-    },
-    {
-      "name": "Scott",
-      "state": "MN"
-    },
-    {
-      "name": "Sherburne",
-      "state": "MN"
-    },
-    {
-      "name": "Sibley",
-      "state": "MN"
-    },
-    {
-      "name": "Stearns",
-      "state": "MN"
-    },
-    {
-      "name": "Steele",
-      "state": "MN"
-    },
-    {
-      "name": "Waseca",
-      "state": "MN"
-    },
-    {
-      "name": "Washington",
-      "state": "MN"
-    },
-    {
-      "name": "Wright",
-      "state": "MN"
-    },
-    {
-      "name": "Contra Costa",
-      "state": "CA"
-    },
-    {
-      "name": "Imperial",
-      "state": "CA"
-    },
-    {
-      "name": "Los Angeles",
-      "state": "CA"
-    },
-    {
-      "name": "Orange",
-      "state": "CA"
-    },
-    {
-      "name": "Riverside",
-      "state": "CA"
-    },
-    {
-      "name": "San Bernardino",
-      "state": "CA"
-    },
-    {
-      "name": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "Adams",
-      "state": "CO"
-    },
-    {
-      "name": "Arapahoe",
-      "state": "CO"
-    },
-    {
-      "name": "Boulder",
-      "state": "CO"
-    },
-    {
-      "name": "Denver",
-      "state": "CO"
-    },
-    {
-      "name": "Douglas",
-      "state": "CO"
-    },
-    {
-      "name": "Jefferson",
-      "state": "CO"
-    },
-    {
-      "name": "Weld",
-      "state": "CO"
-    },
-    {
-      "name": "Charlotte",
-      "state": "FL"
-    },
-    {
-      "name": "Citrus",
-      "state": "FL"
-    },
-    {
-      "name": "Collier",
-      "state": "FL"
-    },
-    {
-      "name": "Hardee",
-      "state": "FL"
-    },
-    {
-      "name": "Hernando",
-      "state": "FL"
-    },
-    {
-      "name": "Hillsborough",
-      "state": "FL"
-    },
-    {
-      "name": "Lee",
-      "state": "FL"
-    },
-    {
-      "name": "Manatee",
-      "state": "FL"
-    },
-    {
-      "name": "Pasco",
-      "state": "FL"
-    },
-    {
-      "name": "Pinellas",
-      "state": "FL"
-    },
-    {
-      "name": "Polk",
-      "state": "FL"
-    },
-    {
-      "name": "Sarasota",
-      "state": "FL"
-    },
-    {
-      "name": "Sumter",
-      "state": "FL"
-    },
-    {
-      "name": "Collier",
-      "state": "FL"
-    },
-    {
-      "name": "Freeborn",
-      "state": "MN"
-    },
-    {
-      "name": "Mesa",
-      "state": "CO"
-    },
-    {
-      "name": "Todd",
-      "state": "MN"
-    },
-    {
-      "name": "Alameda",
-      "state": "CA"
-    },
-    {
-      "name": "Aitkin",
-      "state": "MN"
-    },
-    {
-      "name": "Becker",
-      "state": "MN"
-    },
-    {
-      "name": "Beltrami",
-      "state": "MN"
-    },
-    {
-      "name": "Carlton",
-      "state": "MN"
-    },
-    {
-      "name": "Cass",
-      "state": "MN"
-    },
-    {
-      "name": "Chippewa",
-      "state": "MN"
-    },
-    {
-      "name": "Clearwater",
-      "state": "MN"
-    },
-    {
-      "name": "Douglas",
-      "state": "MN"
-    },
-    {
-      "name": "Hubbard",
-      "state": "MN"
-    },
-    {
-      "name": "Itasca",
-      "state": "MN"
-    },
-    {
-      "name": "Mower",
-      "state": "MN"
-    },
-    {
-      "name": "Otter Tail",
-      "state": "MN"
-    },
-    {
-      "name": "Pope",
-      "state": "MN"
-    },
-    {
-      "name": "Saint Louis",
-      "state": "MN"
-    },
-    {
-      "name": "Swift",
-      "state": "MN"
-    },
-    {
-      "name": "Wabasha",
-      "state": "MN"
-    },
-    {
-      "name": "Wadena",
-      "state": "MN"
-    },
-    {
-      "name": "Winona",
-      "state": "MN"
-    },
-    {
-      "name": "Orange",
-      "state": "FL"
-    },
-    {
-      "name": "Osceola",
-      "state": "FL"
-    },
-    {
-      "name": "Seminole",
-      "state": "FL"
-    },
-    {
-      "name": "Cache",
-      "state": "UT"
-    },
-    {
-      "name": "Weber",
-      "state": "UT"
-    },
-    {
-      "name": "Morgan",
-      "state": "UT"
-    },
-    {
-      "name": "Summit",
-      "state": "UT"
-    },
-    {
-      "name": "Davis",
-      "state": "UT"
-    },
-    {
-      "name": "Tooele",
-      "state": "UT"
-    },
-    {
-      "name": "Salt Lake",
-      "state": "UT"
-    },
-    {
-      "name": "Wasatch",
-      "state": "UT"
-    },
-    {
-      "name": "Utah",
-      "state": "UT"
-    },
-    {
-      "name": "Sacramento",
-      "state": "CA"
-    },
-    {
-      "name": "Clackamas",
-      "state": "OR"
-    },
-    {
-      "name": "Marion",
-      "state": "OR"
-    },
-    {
-      "name": "Multnomah",
-      "state": "OR"
-    },
-    {
-      "name": "Washington",
-      "state": "OR"
-    },
-    {
-      "name": "Yamhill",
-      "state": "MN"
+      "icon": "r",
+      "counties": [
+        {
+          "name": "Cache",
+          "state": "UT"
+        },
+        {
+          "name": "Weber",
+          "state": "UT"
+        },
+        {
+          "name": "Morgan",
+          "state": "UT"
+        },
+        {
+          "name": "Summit",
+          "state": "UT"
+        },
+        {
+          "name": "Davis",
+          "state": "UT"
+        },
+        {
+          "name": "Tooele",
+          "state": "UT"
+        },
+        {
+          "name": "Salt Lake",
+          "state": "UT"
+        },
+        {
+          "name": "Wasatch",
+          "state": "UT"
+        },
+        {
+          "name": "Utah",
+          "state": "UT"
+        }
+      ]
     }
   ]
 }

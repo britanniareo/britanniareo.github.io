@@ -1,18 +1,32 @@
 <main class="page page--service-areas">
   <section class="container">
-    <h1>Service Areas</h1>
-    <md-card>
-      <md-card-content>
-        <md-tabs md-dynamic-height md-border-bottom md-swipe-content md-selected="3" class="md-primary">
-          <md-tab ng-repeat="state in states | orderBy:'name'" label="{{ state.name }}">
-            <md-content class="md-padding">
-              <h2>{{ state.name }}</h2>
-              <h3 class="stateface">{{ state.icon }}</h3>
-              <p ng-repeat="county in counties | filter:{ state: state.abbr } | orderBy:'name'">{{ county.name }}</p>
-            </md-content>
-          </md-tab>
-        </md-tabs>
-      </md-card-content>
-    </md-card>
+    <div layout="row" layout-align="start center">
+      <h1 flex>Service Areas</h1>
+      <div layout="row">
+        <i class="fa fa-2x fa-search"></i>
+        <md-input-container class="md-block">
+          <label>County</label>
+          <input ng-model="countyFilter">
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>State</label>
+          <md-select ng-model="stateFilter">
+            <md-option value="">All States</md-option>
+            <md-option ng-repeat="state in states | orderBy:'name'" value="{{state.abbr}}">
+              {{state.name}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+    </div>
+    <div class="state state--{{state.abbr}} md-whiteframe-5dp" ng-repeat="state in states | orderBy:'name'" ng-show="showState(state)">
+      <h2><span class="stateface">{{ state.icon }}</span>{{ state.name }}</h2>
+      <div class="counties" layout="row" layout-align="start start" layout-wrap>
+        <p ng-repeat="county in state.counties | orderBy:'name'" ng-show="showCounty(county)" flex="50" flex-gt-xs="25">{{ county.name }}</p>
+      </div>
+    </div>
+    <div ng-show="statesShowing() === 0">
+      <p class="no-results">Sorry. There are no counties we currently serve that match your search. <a href="javascript:void(0)" ng-click="clearFilters()">Start over</a>?</p>
+    </div>
   </section>
 </main>

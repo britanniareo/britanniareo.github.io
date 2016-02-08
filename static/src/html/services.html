@@ -1,6 +1,25 @@
 <main class="page page--services">
   <section class="container">
-    <h1>Services</h1>
-    <p ng-repeat=" service in services | orderBy:'name' ">{{ service.name }}</p>
+    <div layout="row" layout-align="start center" layout-wrap>
+      <h1>Services</h1>
+      <div class="filters" layout="row" layout-align="center start">
+        <i class="fa fa-2x fa-search"></i>
+        <md-input-container class="md-block">
+          <label>Services Search</label>
+          <input ng-model="serviceFilter">
+        </md-input-container>
+      </div>
+    </div>
+    <div class="services md-whiteframe-5dp">
+      <div layout="row" layout-wrap>
+        <div class="service" ng-repeat=" service in services | orderBy:'name'" flex="100" flex-gt-sm="50" ng-show="showService(service)">
+          <h3 ng-bind="service.name"></h3>
+          <p ng-bind="service.description"></p>
+        </div>
+      </div>
+      <div ng-show="servicesShowing() === 0">
+        <p class="no-results">Sorry. There are no services that match your search. <a href="javascript:void(0)" ng-click="clearFilters()">Start over</a>?</p>
+      </div>
+    </div>
   </section>
 </main>

@@ -35,13 +35,26 @@
       $stateProvider.state('home', {
         url:'/',
         controller: 'HomeCtrl',
-        templateUrl: '/html/home.html'
+        templateUrl: '/html/home.html',
+        resolve: {
+          services: ['ServicesService', function(ServicesService) {
+              return ServicesService.getFeatured();
+          }],
+          areas: ['ServiceAreasService', function(ServiceAreasService) {
+              return ServiceAreasService.getSummary();
+          }]
+        }
       });
 
       $stateProvider.state('services', {
         url:'/services',
         controller: 'ServicesCtrl',
-        templateUrl: '/html/services.html'
+        templateUrl: '/html/services.html',
+        resolve: {
+          services: ['ServicesService', function(ServicesService) {
+              return ServicesService.getAll();
+          }]
+        }
       });
 
       $stateProvider.state('service-areas', {
@@ -50,7 +63,7 @@
         templateUrl: '/html/service-areas.html',
         resolve: {
           areas: ['ServiceAreasService', function(ServiceAreasService) {
-              return ServiceAreasService.getAllAreas();
+              return ServiceAreasService.getAll();
           }]
         }
       });
@@ -162,8 +175,18 @@
     .factory('ServicesService', ['$http', function($http) {
       var servicesService = {};
 
-      servicesService.getAllServices = function() {
-        return $http({ url: '/api/services/v1' });
+      servicesService.getAll = function() {
+        return $http.get('/api/services/v1').then(function(response) {
+            return response.data;
+        });
+      };
+
+      servicesService.getFeatured = function() {
+        return $http.get('/api/services/v1').then(function(response) {
+            return response.data.filter(function(service) {
+              return service.featured;
+            });
+        });
       };
 
       return servicesService;
@@ -172,9 +195,28 @@
     .factory('ServiceAreasService', ['$http', function($http) {
       var areasService = {};
 
-      areasService.getAllAreas = function() {
+      areasService.getAll = function() {
         return $http.get('/api/service-areas/v1').then(function(response) {
             return response.data;
+        });
+      };
+
+      areasService.getSummary = function() {
+        return $http.get('/api/service-areas/v1').then(function(response) {
+            var stateCount = 0;
+            var countyCount = 0;
+
+            angular.forEach(response.data.states, function(state, sIndex) {
+              stateCount++;
+              angular.forEach(state.counties, function(county, cIndex) {
+                countyCount++;
+              });
+            });
+            
+            return { 
+              states: stateCount,
+              counties: countyCount 
+            };
         });
       };
 
@@ -202,43 +244,34 @@
 
     }])
 
-    .controller('HomeCtrl', ['$scope', function($scope) {
+    .controller('HomeCtrl', ['$scope', 'ServicesService', 'ServicesService', 'services', 'areas', function($scope, ServicesService, ServiceAreasService, services, areas) {
 
-      $scope.services = [
-        {
-          name: 'Service',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper consectetur eleifend. Integer quis turpis et ligula aliquet congue. Nullam pharetra lorem sem, vitae mollis odio lobortis et. Nunc lobortis pulvinar lacus et porta. Ut non placerat turpis'
-        },
-        {
-          name: 'Service',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper consectetur eleifend. Integer quis turpis et ligula aliquet congue. Nullam pharetra lorem sem, vitae mollis odio lobortis et. Nunc lobortis pulvinar lacus et porta. Ut non placerat turpis'
-        },
-        {
-          name: 'Service',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper consectetur eleifend. Integer quis turpis et ligula aliquet congue. Nullam pharetra lorem sem, vitae mollis odio lobortis et. Nunc lobortis pulvinar lacus et porta. Ut non placerat turpis'
-        },
-        {
-          name: 'Service',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper consectetur eleifend. Integer quis turpis et ligula aliquet congue. Nullam pharetra lorem sem, vitae mollis odio lobortis et. Nunc lobortis pulvinar lacus et porta. Ut non placerat turpis'
-        },
-        {
-          name: 'Service',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper consectetur eleifend. Integer quis turpis et ligula aliquet congue. Nullam pharetra lorem sem, vitae mollis odio lobortis et. Nunc lobortis pulvinar lacus et porta. Ut non placerat turpis'
-        },
-        {
-          name: 'Service',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper consectetur eleifend. Integer quis turpis et ligula aliquet congue. Nullam pharetra lorem sem, vitae mollis odio lobortis et. Nunc lobortis pulvinar lacus et porta. Ut non placerat turpis'
-        }
-      ];
+      $scope.services = services;
+      $scope.areas = areas;
 
     }])
 
-    .controller('ServicesCtrl', ['$scope', 'ServicesService', function($scope, ServicesService) {
+    .controller('ServicesCtrl', ['$scope', 'ServicesService', 'services', function($scope, ServicesService, services) {
 
-      $scope.services = [];
-      ServicesService.getAllServices().then(function(response) {
-        $scope.services = response.data;
-      });
+      $scope.serviceFilter = '';
+      $scope.services = services;
+
+      $scope.clearFilters = function() {
+        $scope.serviceFilter = '';
+      }
+
+      $scope.showService = function(service) {
+        var filter = $scope.serviceFilter.toLowerCase();
+        var show = (!filter || filter === '' || service.name.toLowerCase().indexOf(filter) >= 0 || service.description.toLowerCase().indexOf(filter) >= 0);
+        service.showing = show;
+        return show;
+      };
+
+      $scope.servicesShowing = function() {
+        return $scope.services.filter(function(service) {
+          return service.showing;
+        }).length;
+      }
 
     }])
 
@@ -246,20 +279,16 @@
 
       var _showCounty = function(county) {
         var filter = $scope.countyFilter.toLowerCase();
-        if (!filter || filter === "" || county.name.toLowerCase().indexOf(filter) >= 0) {
-          return true;
-        } else {
-          return false;
-        }
+        return (!filter || filter === '' || county.name.toLowerCase().indexOf(filter) >= 0);
       };
 
-      $scope.countyFilter = "";
-      $scope.stateFilter = "";
+      $scope.countyFilter = '';
+      $scope.stateFilter = '';
       $scope.states = areas.states;
 
       $scope.clearFilters = function() {
-        $scope.countyFilter = "";
-        $scope.stateFilter = "";
+        $scope.countyFilter = '';
+        $scope.stateFilter = '';
       }
 
       $scope.showCounty = function(county) {

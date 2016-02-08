@@ -448,6 +448,28 @@ footer {
 
 .page--service-areas {
 
+  h1 {
+    flex: 1 1 100%;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+
+    @media screen and (min-width: 640px) {
+      text-align: left;
+      flex: 1 1 auto;
+    }
+  }
+
+  .filters {
+    flex: 1 1 100%;
+    max-width: 100%;
+    max-height: 100%;
+
+    @media screen and (min-width: 640px) {
+      flex: 0 0 auto;
+    }
+  }
+
   md-input-container {
     margin-bottom: 0;
   }

@@ -20,7 +20,9 @@
       </div>
     </div>
     <div class="state state--{{state.abbr}} md-whiteframe-5dp" ng-repeat="state in states | orderBy:'name'" ng-show="showState(state)">
-      <h2><span class="stateface">{{ state.icon }}</span>{{ state.name }}</h2>
+      <div class="state-header">
+        <h2><span class="stateface">{{ state.icon }}</span>{{ state.name }}</h2>
+      </div>
       <div class="counties" layout="row" layout-align="start start" layout-wrap>
         <p ng-repeat="county in state.counties | orderBy:'name'" ng-show="showCounty(county)" flex="50" flex-gt-xs="25">{{ county.name }}</p>
       </div>

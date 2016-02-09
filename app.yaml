@@ -8,9 +8,6 @@ module: default
 handlers:
 
 # Resources
-- url: /robots.txt
-  static_files: robots.txt
-  upload: robots.txt
 - url: /css
   static_dir: static/dist/css
 - url: /img

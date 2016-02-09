@@ -1,6 +1,20 @@
 /* Angular Material Styles */
 @import 'https://ajax.googleapis.com/ajax/libs/angular_material/1.0.4/angular-material.min.css';
 
+@mixin state-bkg($abbrev, $bkg, $bkg-sm, $pos) {
+  &--#{$abbrev} {
+    @media screen and (min-width: 600px) {
+      background: url( $bkg ) no-repeat $pos top;
+      background-size: cover;
+    }
+
+    .state-header {
+      background: url( $bkg-sm ) no-repeat $pos top;
+      background-size: cover;
+    }
+  }
+}
+
 @font-face {
      font-family: 'StateFaceRegular';
      src: url('/font/stateface-regular-webfont.eot');
@@ -528,77 +542,15 @@ footer {
       box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12); /* 5dp */
     }
 
-    &--CA {
-      @media screen and (min-width: 600px) {
-        background: url(/img/bkg_ca.jpg) no-repeat right top;
-        background-size: cover;
-      }
-
-      .state-header {
-        background: url(/img/bkg_ca_sm.jpg) no-repeat right top;
-        background-size: cover;
-      }
-    }
-
-    &--CO {
-      @media screen and (min-width: 600px) {
-        background: url(/img/bkg_co.jpg) no-repeat center top;
-        background-size: cover;
-      }
-
-      .state-header {
-        background: url(/img/bkg_co_sm.jpg) no-repeat center top;
-        background-size: cover;
-      }
-    }
-
-    &--FL {
-      @media screen and (min-width: 600px) {
-        background: url(/img/bkg_fl.jpg) no-repeat center top;
-        background-size: cover;
-      }
-
-      .state-header {
-        background: url(/img/bkg_fl_sm.jpg) no-repeat center top;
-        background-size: cover;
-      }
-    }
-
-    &--MN {
-      @media screen and (min-width: 600px) {
-        background: url(/img/bkg_mn.jpg) no-repeat right top;
-        background-size: cover;
-      }
-
-      .state-header {
-        background: url(/img/bkg_mn_sm.jpg) no-repeat right top;
-        background-size: cover;
-      }
-    }
-
-    &--OR {
-      @media screen and (min-width: 600px) {
-        background: url(/img/bkg_or.jpg) no-repeat right top;
-        background-size: cover; 
-      }
-
-      .state-header {
-        background: url(/img/bkg_or_sm.jpg) no-repeat right top;
-        background-size: cover;
-      }
-    }
-
-    &--UT {
-      @media screen and (min-width: 600px) {
-        background: url(/img/bkg_ut.jpg) no-repeat right top;
-        background-size: cover;
-      }
-
-      .state-header {
-        background: url(/img/bkg_ut_sm.jpg) no-repeat right top;
-        background-size: cover;
-      }
-    }
+    @include state-bkg('CA', '/img/bkg_ca.jpg', '/img/bkg_ca_sm.jpg', right);
+    @include state-bkg('CO', '/img/bkg_co.jpg', '/img/bkg_co_sm.jpg', center);
+    @include state-bkg('FL', '/img/bkg_fl.jpg', '/img/bkg_fl_sm.jpg', center);
+    @include state-bkg('MN', '/img/bkg_mn.jpg', '/img/bkg_mn_sm.jpg', right);
+    @include state-bkg('ND', '/img/bkg_nd.jpg', '/img/bkg_nd_sm.jpg', center);
+    @include state-bkg('OR', '/img/bkg_or.jpg', '/img/bkg_or_sm.jpg', right);
+    @include state-bkg('SD', '/img/bkg_sd.jpg', '/img/bkg_sd_sm.jpg', center);
+    @include state-bkg('UT', '/img/bkg_ut.jpg', '/img/bkg_ut_sm.jpg', right);
+    @include state-bkg('WI', '/img/bkg_wi.jpg', '/img/bkg_wi_sm.jpg', right);
 
     .state-header {
       @media screen and (min-width: 600px) {

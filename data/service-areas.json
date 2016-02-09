@@ -377,6 +377,61 @@
       ]
     },
     {
+      "name": "North Dakota",
+      "abbr": "ND",
+      "icon": "b",
+      "counties": [
+        {
+          "name": "Walsh",
+          "state": "ND"
+        },
+        {
+          "name": "Ramsey",
+          "state": "ND"
+        },
+        {
+          "name": "Grand Forks",
+          "state": "ND"
+        },
+        {
+          "name": "Nelson",
+          "state": "ND"
+        },
+        {
+          "name": "Traill",
+          "state": "ND"
+        },
+        {
+          "name": "Steele",
+          "state": "ND"
+        },
+        {
+          "name": "Griggs",
+          "state": "ND"
+        },
+        {
+          "name": "Cass",
+          "state": "ND"
+        },
+        {
+          "name": "Barnes",
+          "state": "ND"
+        },
+        {
+          "name": "Richland",
+          "state": "ND"
+        },
+        {
+          "name": "Ransom",
+          "state": "ND"
+        },
+        {
+          "name": "Sargent",
+          "state": "ND"
+        }
+      ]
+    },
+    {
       "name": "Oregon",
       "abbr": "OR",
       "icon": "k",
@@ -396,6 +451,101 @@
         {
           "name": "Washington",
           "state": "OR"
+        }
+      ]
+    },
+    {
+      "name": "South Dakota",
+      "abbr": "SD",
+      "icon": "o",
+      "counties": [
+        {
+          "name": "Roberts",
+          "state": "SD"
+        },
+        {
+          "name": "Marshall",
+          "state": "SD"
+        },
+        {
+          "name": "Day",
+          "state": "SD"
+        },
+        {
+          "name": "Grant",
+          "state": "SD"
+        },
+        {
+          "name": "Deuel",
+          "state": "SD"
+        },
+        {
+          "name": "Codington",
+          "state": "SD"
+        },
+        {
+          "name": "Hamlin",
+          "state": "SD"
+        },
+        {
+          "name": "Clark",
+          "state": "SD"
+        },
+        {
+          "name": "Brookings",
+          "state": "SD"
+        },
+        {
+          "name": "Kimsbury",
+          "state": "SD"
+        },
+        {
+          "name": "Moddy",
+          "state": "SD"
+        },
+        {
+          "name": "Lake",
+          "state": "SD"
+        },
+        {
+          "name": "Miner",
+          "state": "SD"
+        },
+        {
+          "name": "Minnehaha",
+          "state": "SD"
+        },
+        {
+          "name": "McCook",
+          "state": "SD"
+        },
+        {
+          "name": "Hanson",
+          "state": "SD"
+        },
+        {
+          "name": "Hutchinson",
+          "state": "SD"
+        },
+        {
+          "name": "Turner",
+          "state": "SD"
+        },
+        {
+          "name": "Lincoln",
+          "state": "SD"
+        },
+        {
+          "name": "Union",
+          "state": "SD"
+        },
+        {
+          "name": "Clay",
+          "state": "SD"
+        },
+        {
+          "name": "Yankton",
+          "state": "SD"
         }
       ]
     },
@@ -439,6 +589,245 @@
         {
           "name": "Utah",
           "state": "UT"
+        }
+      ]
+    },
+    {
+      "name": "Wisconsin",
+      "abbr": "WI",
+      "icon": "v",
+      "counties": [
+        {
+          "name": "Douglas",
+          "state": "WI"
+        },
+        {
+          "name": "Washburn",
+          "state": "WI"
+        },
+        {
+          "name": "Burnett",
+          "state": "WI"
+        },
+        {
+          "name": "Polk",
+          "state": "WI"
+        },
+        {
+          "name": "Barron",
+          "state": "WI"
+        },
+        {
+          "name": "St. Croix",
+          "state": "WI"
+        },
+        {
+          "name": "Pierce",
+          "state": "WI"
+        },
+        {
+          "name": "Dunn",
+          "state": "WI"
+        },
+        {
+          "name": "Pepin",
+          "state": "WI"
+        },
+        {
+          "name": "Buffalo",
+          "state": "WI"
+        },
+        {
+          "name": "Sawyer",
+          "state": "WI"
+        },
+        {
+          "name": "Rusk",
+          "state": "WI"
+        },
+        {
+          "name": "Chippewa",
+          "state": "WI"
+        },
+        {
+          "name": "Eau Claire",
+          "state": "WI"
+        },
+        {
+          "name": "Trempealeau",
+          "state": "WI"
+        },
+        {
+          "name": "La Crosse",
+          "state": "WI"
+        },
+        {
+          "name": "Jackson",
+          "state": "WI"
+        },
+        {
+          "name": "Monroe",
+          "state": "WI"
+        },
+        {
+          "name": "Vernon",
+          "state": "WI"
+        },
+        {
+          "name": "Richland",
+          "state": "WI"
+        },
+        {
+          "name": "Crawford",
+          "state": "WI"
+        },
+        {
+          "name": "Iowa",
+          "state": "WI"
+        },
+        {
+          "name": "Lafayette",
+          "state": "WI"
+        },
+        {
+          "name": "Kenosha",
+          "state": "WI"
+        },
+        {
+          "name": "Racine",
+          "state": "WI"
+        },
+        {
+          "name": "Walworth",
+          "state": "WI"
+        },
+        {
+          "name": "Rock",
+          "state": "WI"
+        },
+        {
+          "name": "Green",
+          "state": "WI"
+        },
+        {
+          "name": "Dane",
+          "state": "WI"
+        },
+        {
+          "name": "Jefferson",
+          "state": "WI"
+        },
+        {
+          "name": "Waukesha",
+          "state": "WI"
+        },
+        {
+          "name": "Milwaukee",
+          "state": "WI"
+        },
+        {
+          "name": "Ozaukee",
+          "state": "WI"
+        },
+        {
+          "name": "Dodge",
+          "state": "WI"
+        },
+        {
+          "name": "Washington",
+          "state": "WI"
+        },
+        {
+          "name": "Green Lake",
+          "state": "WI"
+        },
+        {
+          "name": "Columbia",
+          "state": "WI"
+        },
+        {
+          "name": "Sauk",
+          "state": "WI"
+        },
+        {
+          "name": "Marquette",
+          "state": "WI"
+        },
+        {
+          "name": "Winnebago",
+          "state": "WI"
+        },
+        {
+          "name": "Fond Du Lac",
+          "state": "WI"
+        },
+        {
+          "name": "Sheboygan",
+          "state": "WI"
+        },
+        {
+          "name": "Manitowac",
+          "state": "WI"
+        },
+        {
+          "name": "Calumet",
+          "state": "WI"
+        },
+        {
+          "name": "Waushara",
+          "state": "WI"
+        },
+        {
+          "name": "Waupaca",
+          "state": "WI"
+        },
+        {
+          "name": "Outagamie",
+          "state": "WI"
+        },
+        {
+          "name": "Brown",
+          "state": "WI"
+        },
+        {
+          "name": "Kewaunee",
+          "state": "WI"
+        },
+        {
+          "name": "Menominee",
+          "state": "WI"
+        },
+        {
+          "name": "Oconto",
+          "state": "WI"
+        },
+        {
+          "name": "Marahon",
+          "state": "WI"
+        },
+        {
+          "name": "Portage",
+          "state": "WI"
+        },
+        {
+          "name": "Wood",
+          "state": "WI"
+        },
+        {
+          "name": "Adams",
+          "state": "WI"
+        },
+        {
+          "name": "Juneau",
+          "state": "WI"
+        },
+        {
+          "name": "Taylor",
+          "state": "WI"
+        },
+        {
+          "name": "Clark",
+          "state": "WI"
         }
       ]
     }

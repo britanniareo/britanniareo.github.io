@@ -4,29 +4,40 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Britannia Development Co</title>
+    <title>Britannia Development Company</title>
+    <meta name="description" content="We are a nationwide real estate development company with over 20 years of REO property repair and general construction experience.">
     <link rel="icon" href="/img/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/britannia.css"/>
   </head>
   <body>
-    <!--<header id="top" class="header md-whiteframe-z5" ng-class="{open:menuOpen}" ng-controller="NavCtrl">
+    <header id="top" class="header md-whiteframe-13dp" ng-class="{open:menuOpen}" ng-controller="NavCtrl" ng-cloak>
       <div class="container">
         <div class="header-top clearfix">
-          <a ui-sref="home" class="logo"><img src="img/logo.png" alt="Britannia Logo"/></a>
+          <a ui-sref="home" class="logo" ng-click="closeMenu()"><img src="img/logo.png" alt="Britannia Logo"/></a>
           <a href="javascript:void(0)" class="menu-toggle" ng-click="toggleMenu()"><span></span></a>
           <div class="menu" style="{{ menuStyle }}">
             <div id="menu-wrapper" class="wrapper">
+              <a ui-sref="home" ng-click="closeMenu()">Home</a>
               <a ui-sref="services" ng-click="closeMenu()">Services</a>
-              <a href="javascript:void(0)" ng-click="closeMenu()">Nav Link 2</a>
-              <a href="javascript:void(0)" ng-click="closeMenu()">Nav Link 3</a>
+              <a ui-sref="service-areas" ng-click="closeMenu()">Service Areas</a>
             </div>
           </div>
         </div>
       </div>
-    </header>-->
-    <ui-view></ui-view>
+    </header>
+    <ui-view ng-cloak></ui-view>
+    <footer>
+      <h2>Connect with us</h2>
+      <div class="social-links" layout="row" layout-align="center center" layout-wrap>
+        <md-button href="https://www.facebook.com/britdevelopment/" class="md-fab facebook" aria-label="Like us on facebook"><i class="fa fa-facebook"></i></md-button>
+        <md-button href="https://twitter.com/BritanniaDev" class="md-fab twitter" aria-label="Follow us on twitter"><i class="fa fa-twitter"></i></md-button>
+        <md-button href="https://www.linkedin.com/in/britanniadevelopmentcompany" class="md-fab linkedin" aria-label="connect with us on linkedin"><i class="fa fa-linkedin"></i></md-button>
+        <md-button href="https://plus.google.com/+BritanniaDevelopmentCompanyIncMinneapolis/posts" class="md-fab google-plus" aria-label="Add us on google+"><i class="fa fa-google-plus"></i></md-button>
+      </div>
+      <p class="text-dark-secondary">Britannia Development Company &copy; 2016. <span class="inline-block">All rights reserved.</span></p>
+    </footer>
     <script src="js/vendor.js"></script>
   	<script src="js/britannia.js"></script>
   </body>

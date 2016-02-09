@@ -27,7 +27,8 @@ module.exports = {
     dist: global.dist+'/img'
   },
   sass: {
-    src: global.src+'/scss/**/*.scss',
+    src: global.src+'/scss/*.scss',
+    watchSrc: global.src+'/scss/**/*.scss',
     dist: global.dist+'/css',
     settings: {
       sourceComments: 'map',

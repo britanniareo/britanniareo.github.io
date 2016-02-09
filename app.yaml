@@ -8,6 +8,9 @@ module: default
 handlers:
 
 # Resources
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
 - url: /css
   static_dir: static/dist/css
 - url: /img
@@ -16,6 +19,8 @@ handlers:
   static_dir: static/dist/js
 - url: /html
   static_dir: static/dist/html
+- url: /font
+  static_dir: static/dist/font
 
 - url: .*
   script: main.app

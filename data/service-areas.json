@@ -6,6 +6,10 @@
       "icon": "E",
       "counties": [
         {
+          "name": "Alameda",
+          "state": "CA"
+        },
+        {
           "name": "Contra Costa",
           "state": "CA"
         },
@@ -69,6 +73,10 @@
           "state": "CO"
         },
         {
+          "name": "Mesa",
+          "state": "CO"
+        },
+        {
           "name": "Weld",
           "state": "CO"
         }
@@ -85,10 +93,6 @@
         },
         {
           "name": "Citrus",
-          "state": "FL"
-        },
-        {
-          "name": "Collier",
           "state": "FL"
         },
         {
@@ -287,16 +291,8 @@
           "state": "MN"
         },
         {
-          "name": "Mesa",
-          "state": "CO"
-        },
-        {
           "name": "Todd",
           "state": "MN"
-        },
-        {
-          "name": "Alameda",
-          "state": "CA"
         },
         {
           "name": "Aitkin",
@@ -368,10 +364,6 @@
         },
         {
           "name": "Winona",
-          "state": "MN"
-        },
-        {
-          "name": "Yamhill",
           "state": "MN"
         }
       ]
@@ -451,6 +443,10 @@
         {
           "name": "Washington",
           "state": "OR"
+        },
+        {
+          "name": "Yamhill",
+          "state": "OR"
         }
       ]
     },
@@ -496,11 +492,11 @@
           "state": "SD"
         },
         {
-          "name": "Kimsbury",
+          "name": "Kingsbury",
           "state": "SD"
         },
         {
-          "name": "Moddy",
+          "name": "Moody",
           "state": "SD"
         },
         {
@@ -802,7 +798,7 @@
           "state": "WI"
         },
         {
-          "name": "Marahon",
+          "name": "Marathon",
           "state": "WI"
         },
         {

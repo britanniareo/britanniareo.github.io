@@ -1,0 +1,6 @@
+config_name: local
+domains:
+  britannia:
+    - britannia.localhost
+  debris_squad:
+    - debris-squad.localhost

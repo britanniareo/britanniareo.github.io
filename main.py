@@ -22,7 +22,10 @@ import sys
 cd = os.path.abspath(os.path.dirname(__file__))
 sys.path.insert(0, os.path.join(cd, 'lib'))
 
-import webapp2
+import logging, webapp2
+from webapp2_extras.routes import DomainRoute, PathPrefixRoute, RedirectRoute
+import debris_squad.handlers as debris_squad
+from config import config
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -42,10 +45,24 @@ class ServiceAreasHandler(webapp2.RequestHandler):
 		self.response.headers['Content-Type'] = 'application/json'
 		self.response.write(service_areas)
 
-routes = [
-	(r'/', MainHandler),
-	(r'/api/services/v1', ServicesHandler),
-	(r'/api/service-areas/v1', ServiceAreasHandler)
-]
+routes = []
+
+for domain in config["domains"]["britannia"]:
+
+	routes.append(
+		DomainRoute(domain, [
+			RedirectRoute(r'/', handler=MainHandler, strict_slash=True, name="britannia"),
+			webapp2.Route(r'/api/services/v1', handler=ServicesHandler, name="britannia_api_services"),
+			webapp2.Route(r'/api/service-areas/v1', handler=ServiceAreasHandler, name="britannia_api_service_areas")
+		])
+	)
+
+for domain in config["domains"]["debris_squad"]:
+
+	routes.append(
+		DomainRoute(domain, [
+			RedirectRoute(r'/', handler=debris_squad.HomePageHandler, strict_slash=True, name="debris_squad")
+		])
+	)
 
 app = webapp2.WSGIApplication(routes, debug=True)

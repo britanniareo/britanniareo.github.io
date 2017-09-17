@@ -1,0 +1,8 @@
+config_name: britannia-reo
+domains:
+  britannia:
+    - britannia-reo.appspot.com
+    - britanniareo.com
+    - www.britanniareo.com
+  debris_squad:
+    - debris-squad-dot-britannia-reo.appspot.com

@@ -28,6 +28,8 @@ handlers:
 libraries:
 - name: webapp2
   version: "2.5.2"
+- name: jinja2
+  version: latest
 
 # The following directories/files will be ignored by GAE when deploying
 skip_files:

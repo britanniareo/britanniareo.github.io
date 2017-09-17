@@ -1,8 +1,8 @@
+
 var gulp   = require('gulp'),
     config = require('../config').scripts,
     concat = require('gulp-concat'),
-    jshint = require('gulp-jshint'),
-    size   = require('gulp-filesize'),
+    rename = require('gulp-rename'),
     uglify = require('gulp-uglify');
     vendor = config.src + '/vendor';
 
@@ -11,11 +11,8 @@ gulp.task('scripts', function() {
     config.src+'/britannia.js'
   ])
     .pipe(concat('britannia.js'))
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(size())
     .pipe(uglify())
-    .pipe(size())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(config.dist));
 
   gulp.src([
@@ -27,6 +24,6 @@ gulp.task('scripts', function() {
     vendor + '/analytics.js'
   ])
     .pipe(concat('vendor.js'))
-    .pipe(size())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(config.dist));
 });

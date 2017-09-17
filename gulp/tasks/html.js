@@ -1,9 +1,9 @@
-var gulp   = require('gulp'),
-    minify = require('gulp-minify-html'),
-    config = require('../config').html;
+var gulp    = require('gulp'),
+    htmlmin = require('gulp-htmlmin'),
+    config  = require('../config.js').html;
 
-gulp.task('html', function () {
+gulp.task('html', function(cb) {
   return gulp.src(config.src)
-    .pipe(minify(config.opts))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest(config.dist));
 });

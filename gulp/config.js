@@ -17,26 +17,22 @@ module.exports = {
   },
   html: {
     dist: global.dist + '/html',
-    opts: {
-      empty: true
-    },
     src: global.src + '/html/**/*.html'
   },
   images: {
     src: global.src+'/img/**/*',
     dist: global.dist+'/img'
   },
-  sass: {
-    src: global.src+'/scss/*.scss',
-    watchSrc: global.src+'/scss/**/*.scss',
+  styles: {
+    src: global.src+'/scss/**/*.scss',
     dist: global.dist+'/css',
     settings: {
-      sourceComments: 'map',
-      imagePath: '/img' // Used by the image-url helper
+      sourceComments: 'map'
     }
   },
   scripts: {
     dist: global.dist+'/js',
-    src: global.src+'/js'
+    src: global.src+'/js',
+    watchSrc: global.src+'/js/**/*.js'
   }
 };

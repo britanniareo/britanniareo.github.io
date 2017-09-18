@@ -15,8 +15,7 @@ a:focus{outline:0}
 }
 @media only screen and (min-width:960px){.ds-banner{padding:84px 20px}
 }
-.ds-banner a.logo{display:block;max-width:180px;margin:0 auto;opacity:.8;-webkit-transition:opacity .2s ease;transition:opacity .2s ease}
-.ds-banner a.logo:focus,.ds-banner a.logo:hover{opacity:1}
+.ds-banner a.logo{display:block;max-width:180px;margin:0 auto}
 .ds-banner h1{padding:24px 0 8px;font-size:24px;line-height:30px}
 @media only screen and (min-width:600px){.ds-banner a.logo{max-width:300px}
 .ds-banner h1{padding:28px 0 12px;font-size:42px;line-height:48px}

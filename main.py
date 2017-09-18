@@ -61,7 +61,8 @@ for domain in config["domains"]["debris_squad"]:
 
 	routes.append(
 		DomainRoute(domain, [
-			RedirectRoute(r'/', handler=debris_squad.HomePageHandler, strict_slash=True, name="debris_squad")
+			RedirectRoute(r'/', handler=debris_squad.HomePageHandler, strict_slash=True, name="debris_squad"),
+			RedirectRoute(r'/thank-you/', handler=debris_squad.ThankYouPageHandler, strict_slash=True, name="debris_squad_thank_you")
 		])
 	)
 

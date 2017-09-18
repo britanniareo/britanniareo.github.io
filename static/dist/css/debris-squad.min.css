@@ -1,14 +1,16 @@
 .ds-banner a.cta,a{text-decoration:none}
 .ds-about li,.ds-banner{background-repeat:no-repeat}
-.ds-banner,footer{text-align:center}
+.ds-banner,.ds-thank-you{min-height:100vh;align-content:center}
+.ds-thank-you footer,img{width:100%}
+.ds-banner,.ds-thank-you div,footer{text-align:center}
 *{-webkit-box-sizing:border-box;box-sizing:border-box}
 body,html{background-color:#FAFAFA;color:rgba(0,0,0,.87);margin:0;padding:0}
 body{font-size:16px;font-family:Lato,sans-serif;line-height:1.5}
 h1,h2,h3,h4,h5,h6{font-family:Montserrat,sans-serif;margin:0}
 p{margin:0}
-img{display:block;width:100%;height:auto}
+img{display:block;height:auto}
 a:focus{outline:0}
-.ds-banner{padding:36px 20px;background-image:url(/img/debris-squad/banner-bg.png);background-size:cover;background-position:center center;min-height:100vh;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:#FFF}
+.ds-banner{padding:36px 20px;background-image:url(/img/debris-squad/banner-bg.png);background-size:cover;background-position:center center;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:#FFF}
 @media only screen and (min-width:600px){.ds-banner{padding:60px 20px}
 }
 @media only screen and (min-width:960px){.ds-banner{padding:84px 20px}
@@ -39,4 +41,14 @@ a:focus{outline:0}
 }
 .ds-about a{color:#0E5DAC}
 .ds-about a:focus,.ds-about a:hover{color:darker(#0E5DAC,20%)}
+.ds-thank-you{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.ds-thank-you div{padding:36px 20px}
+@media only screen and (min-width:600px){.ds-thank-you div{padding:60px 20px}
+}
+@media only screen and (min-width:960px){.ds-thank-you div{padding:84px 20px}
+}
+.ds-thank-you div .fa{color:#0E5DAC;font-size:120px}
+.ds-thank-you div h1{font-size:60px;line-height:66px}
+.ds-thank-you div p{padding:12px 0 36px;font-size:24px;line-height:30px}
+.ds-thank-you div a.logo{display:block;max-width:300px;margin:0 auto}
 footer{padding:36px 20px;background:#F5F5F5;color:rgba(0,0,0,.54)}

@@ -1,0 +1,21 @@
+.ds-banner a.cta,a{text-decoration:none}
+*{-webkit-box-sizing:border-box;box-sizing:border-box}
+body,html{margin:0;padding:0}
+body{font-size:16px;font-family:Lato,sans-serif;line-height:1.5}
+h1,h2,h3,h4,h5,h6{font-family:Montserrat,sans-serif;margin:0}
+p{margin:0}
+img{display:block;width:100%;height:auto}
+a:focus{outline:0}
+.ds-banner{padding:36px 20px;background-image:url(/img/debris-squad/banner-bg.png);background-size:cover;background-position:center center;background-repeat:no-repeat;min-height:100vh;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;color:#FFF}
+@media only screen and (min-width:600px){.ds-banner{padding:60px 20px}
+}
+@media only screen and (min-width:960px){.ds-banner{padding:84px 20px}
+}
+.ds-banner a.logo{display:block;max-width:180px;margin:0 auto;opacity:.8;-webkit-transition:opacity .2s ease;transition:opacity .2s ease}
+@media only screen and (min-width:600px){.ds-banner a.logo{max-width:300px}
+}
+.ds-banner a.logo:focus,.ds-banner a.logo:hover{opacity:1}
+.ds-banner h1{padding:32px 0 12px;font-size:60px;line-height:66px}
+.ds-banner h2{color:rgba(255,255,255,.8);font-family:Lato,sans-serif;font-size:48px;line-height:54px;padding-bottom:32px}
+.ds-banner a.cta{font-family:Montserrat,sans-serif;color:#FFF;display:inline-block;border:1px solid #FFF;padding:11px 24px;border-radius:3px;-webkit-transition:all .2s ease;transition:all .2s ease}
+.ds-banner a.cta:focus,.ds-banner a.cta:hover{background-color:#FFF;color:#0E5DAC}

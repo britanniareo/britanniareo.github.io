@@ -42,39 +42,79 @@ a {
   }
 }
 
+header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 6px 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (min-width: 600px) {
+    padding: 12px 20px;
+    justify-content: space-between;
+  }
+
+  a.logo {
+    display: block;
+
+    img {
+      height: 48px;
+      width: auto;
+
+      @media only screen and (min-width: 600px) {
+        height: 60px;
+      }
+    }
+  }
+
+  a.phone {
+    display: none;
+
+    @media only screen and (min-width: 600px) {
+      display:block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      color: #FFF;
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid #FFF;
+      padding: 11px 24px;
+      border-radius: 3px;
+      transition: all 0.2s ease;
+
+      &:hover, &:focus {
+        background-color: #FFF;
+        color: $ds-blue;
+      }
+    }
+
+    .fa {
+      margin-right: 12px;
+    }
+  }
+}
+
 .ds {
 
   &-banner {
-    padding: 36px 20px;
+    padding: 84px 20px;
     background-image: url(/img/debris-squad/banner-bg.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-content: center;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #FFF;
-
-    @media only screen and (min-width: 600px) {
-      padding: 60px 20px;
-    }
-
-    @media only screen and (min-width: 960px) {
-      padding: 84px 20px;
-    }
-
-    a.logo {
-      display: block;
-      max-width: 180px;
-      margin: 0 auto;
-
-      @media only screen and (min-width: 600px) {
-        max-width: 300px;
-      }
-    }
 
     h1 {
       padding: 24px 0 8px;
@@ -231,8 +271,28 @@ a {
 }
 
 footer {
-  padding: 36px 20px;
   background: #F5F5F5;
   text-align: center;
   color: rgba(0,0,0,0.54);
+
+  > div {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 36px 20px;
+
+    @media only screen and (min-width: 600px) {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  p:first-child {
+    padding-bottom: 12px;
+
+    @media only screen and (min-width: 600px) {
+      padding-bottom: 0;
+    }
+  }
 }

@@ -1,8 +1,8 @@
-header,img{width:100%}
+header,header div,img{width:100%}
 .ds-banner a.cta,a{text-decoration:none}
 .ds-about li,.ds-banner{background-repeat:no-repeat}
 .ds-banner,.ds-thank-you{min-height:100vh;-webkit-box-direction:normal;align-content:center}
-.ds-banner,.ds-thank-you,header{align-content:center}
+.ds-banner,.ds-thank-you,header div{align-content:center}
 .ds-banner,.ds-thank-you div,footer{text-align:center}
 *{-webkit-box-sizing:border-box;box-sizing:border-box}
 body,html{background-color:#FAFAFA;color:rgba(0,0,0,.87);margin:0;padding:0}
@@ -11,11 +11,12 @@ h1,h2,h3,h4,h5,h6{font-family:Montserrat,sans-serif;margin:0}
 p{margin:0}
 img{display:block;height:auto}
 a:focus{outline:0}
-header{max-width:1280px;margin:0 auto;padding:6px 20px;position:absolute;top:0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+header{position:absolute;top:0;left:0}
+header div{max-width:1280px;margin:0 auto;padding:6px 20px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 header a.logo{display:block}
 header a.logo img{height:48px;width:auto}
 header a.phone{display:none}
-@media only screen and (min-width:600px){header{padding:12px 20px;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+@media only screen and (min-width:600px){header div{padding:12px 20px;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 header a.logo img{height:60px}
 header a.phone{font-family:Montserrat,sans-serif;font-size:14px;color:#FFF;display:inline-block;text-decoration:none;border:1px solid #FFF;padding:11px 24px;border-radius:3px;-webkit-transition:all .2s ease;transition:all .2s ease}
 header a.phone:focus,header a.phone:hover{background-color:#FFF;color:#0E5DAC}

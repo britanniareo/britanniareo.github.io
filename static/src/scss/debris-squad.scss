@@ -43,20 +43,26 @@ a {
 }
 
 header {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 6px 20px;
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
 
-  @media only screen and (min-width: 600px) {
-    padding: 12px 20px;
-    justify-content: space-between;
+  div {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 6px 20px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (min-width: 600px) {
+      padding: 12px 20px;
+      justify-content: space-between;
+    }
   }
 
   a.logo {

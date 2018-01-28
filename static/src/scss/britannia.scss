@@ -256,18 +256,37 @@ header {
   }
 }
 
-footer {
+.footer {
   background: #FAFAFA;
   padding: 30px 0;
   text-align: center;
 
   h2 {
-    margin: 0;
+    margin: 0 0 24px;
     line-height: 1.5em;
   }
 
+  &-company {
+    margin-bottom: 48px;
+  }
+
+  &-contact {
+    margin-bottom: 48px;
+  }
+
+  &-address {
+    margin-bottom: 48px;
+
+    div {
+      margin: 12px 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
   .social-links {
-    margin-bottom: 30px;
     
     .md-button {
 
@@ -288,8 +307,8 @@ footer {
       }
 
       .fa {
-        line-height: 56px;
-        font-size: 28px;
+        line-height: 40px;
+        font-size: 18px;
       }
     }
   }

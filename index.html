@@ -8,7 +8,7 @@
     <meta name="description" content="We are a nationwide real estate development company with over 20 years of REO property repair and general construction experience.">
     <link rel="icon" href="/img/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/britannia.min.css"/>
   </head>
   <body>
@@ -28,15 +28,42 @@
       </div>
     </header>
     <ui-view ng-cloak></ui-view>
-    <footer>
-      <h2>Connect with us</h2>
-      <div class="social-links" layout="row" layout-align="center center" layout-wrap>
-        <md-button href="https://www.facebook.com/britdevelopment/" class="md-fab facebook" aria-label="Like us on facebook"><i class="fa fa-facebook"></i></md-button>
-        <md-button href="https://twitter.com/BritanniaDev" class="md-fab twitter" aria-label="Follow us on twitter"><i class="fa fa-twitter"></i></md-button>
-        <md-button href="https://www.linkedin.com/in/britanniadevelopmentcompany" class="md-fab linkedin" aria-label="connect with us on linkedin"><i class="fa fa-linkedin"></i></md-button>
-        <md-button href="https://plus.google.com/+BritanniaDevelopmentCompanyIncMinneapolis/posts" class="md-fab google-plus" aria-label="Add us on google+"><i class="fa fa-google-plus"></i></md-button>
+    <footer class="footer">
+      <div class="container" layout-gt-xs="row">
+        <div class="footer-company" flex-gt-xs="33">
+          <h2>Company</h2>
+          <p><a ui-sref="home">Home</a></p>
+          <p><a ui-sref="services">Services</a></p>
+          <p><a ui-sref="service-areas">Service Areas</a></p>
+        </div>
+        <div class="footer-contact" flex-gt-xs="33">
+          <h2>Contact</h2>
+          <p><a href="mailto:info@britanniareo.com">info@britanniareo.com</a></p>
+          <p><a href="tel:+18003779202" class="md-raised md-primary">+1 (800)-377-9202</a></p>
+          <div class="social-links" layout="row" layout-align="center center" layout-wrap>
+            <md-button href="https://www.facebook.com/britdevelopment/" class="md-fab md-mini facebook" aria-label="Like us on facebook"><i class="fa fa-facebook"></i></md-button>
+            <md-button href="https://twitter.com/BritanniaDev" class="md-fab md-mini twitter" aria-label="Follow us on twitter"><i class="fa fa-twitter"></i></md-button>
+            <md-button href="https://www.linkedin.com/in/britanniadevelopmentcompany" class="md-fab md-mini linkedin" aria-label="connect with us on linkedin"><i class="fa fa-linkedin"></i></md-button>
+            <md-button href="https://plus.google.com/+BritanniaDevelopmentCompanyIncMinneapolis/posts" class="md-fab md-mini google-plus" aria-label="Add us on google+"><i class="fa fa-google-plus"></i></md-button>
+          </div>
+        </div>
+        <div class="footer-address" flex-gt-xs="33">
+          <h2>Address</h2>
+          <div>
+            <p>14212 23rd Ave. N.</p>
+            <p>Minneapolis, MN  55447</p>
+          </div>
+          <div>
+            <p>17595 S. Tamiami Trail Suite 201</p>
+            <p>Fort Myers, FL  33908</p>
+          </div>
+          <div>
+            <p>6260 39th St. N. Suite J</p>
+            <p>Pinellas Park, FL  33781</p>
+          </div>
+        </div>
       </div>
-      <p class="text-dark-secondary">Britannia Development Company &copy; 2016-2017. <span class="inline-block">All rights reserved.</span></p>
+      <p class="footer-legal text-dark-secondary">Britannia Development Company &copy; 2016-2018. <span class="inline-block">All rights reserved.</span></p>
     </footer>
     <script src="js/vendor.min.js"></script>
   	<script src="js/britannia.min.js"></script>

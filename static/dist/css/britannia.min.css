@@ -2482,14 +2482,16 @@ header .menu a:last-child{padding-right:0}
 .open .menu-toggle span:after,.open .menu-toggle span:before{top:0}
 .open .menu-toggle span:before{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
 .open .menu-toggle span:after{-webkit-transform:rotate(45deg);transform:rotate(45deg)}
-footer{background:#FAFAFA;padding:30px 0;text-align:center}
-footer h2{margin:0;line-height:1.5em}
-footer .social-links{margin-bottom:30px}
-footer .social-links .md-button.facebook{background:#3B5998!important}
-footer .social-links .md-button.twitter{background:#00ACED!important}
-footer .social-links .md-button.linkedin{background:#007BB5!important}
-footer .social-links .md-button.google-plus{background:#DD4B39!important}
-footer .social-links .md-button .fa{line-height:56px;font-size:28px}
+.footer{background:#FAFAFA;padding:30px 0;text-align:center}
+.footer h2{margin:0 0 24px;line-height:1.5em}
+.footer-address,.footer-company,.footer-contact{margin-bottom:48px}
+.footer-address div{margin:12px 0}
+.footer-address p{margin:0}
+.footer .social-links .md-button.facebook{background:#3B5998!important}
+.footer .social-links .md-button.twitter{background:#00ACED!important}
+.footer .social-links .md-button.linkedin{background:#007BB5!important}
+.footer .social-links .md-button.google-plus{background:#DD4B39!important}
+.footer .social-links .md-button .fa{line-height:40px;font-size:18px}
 .page{background:#FAFAFA;padding:96px 0 30px}
 .page--home{text-align:center;padding-bottom:0}
 .page--home .cta{padding:36px 0}
